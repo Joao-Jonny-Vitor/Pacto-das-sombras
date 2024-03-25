@@ -5,6 +5,7 @@ using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class MakeButton : MonoBehaviour
 {
     [SerializeField]
@@ -40,5 +41,10 @@ public class MakeButton : MonoBehaviour
             hero.GetComponent<FighterAction>().SelectAttack("magic");
 
         }
+    }
+
+    private void SelectAttack()
+    {
+
     }
 }
