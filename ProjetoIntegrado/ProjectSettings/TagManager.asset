@@ -6,6 +6,8 @@ TagManager:
   tags:
   - wall
   - tombstone
+  - Hero
+  - Enemy
   layers:
   - Default
   - TransparentFX

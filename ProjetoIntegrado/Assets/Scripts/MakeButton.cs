@@ -23,7 +23,7 @@ public class MakeButton : MonoBehaviour
 
     private void AttachCallback(string btn)
     {
-        if (btn.CompareTo("AttackBtn") == 0)
+        if (btn.CompareTo("MeleeBtn") == 0)
         {
             hero.GetComponent<FighterAction>().SelectAttack("melee");
 
@@ -43,8 +43,5 @@ public class MakeButton : MonoBehaviour
         }
     }
 
-    private void SelectAttack()
-    {
 
-    }
 }
