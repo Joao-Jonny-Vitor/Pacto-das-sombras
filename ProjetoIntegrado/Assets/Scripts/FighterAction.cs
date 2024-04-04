@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine;
+
 
 public class FighterAction : MonoBehaviour
 {
@@ -22,4 +22,8 @@ public class FighterAction : MonoBehaviour
 
     [SerializeField]
     private GameObject faceIcon;
+
+    public void SelectAttack(string action){
+
+    }
 }
