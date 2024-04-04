@@ -18,7 +18,7 @@ public class FighterAction : MonoBehaviour
     private GameObject abilityPrefab;
 
     [SerializeField]
-    private GameObject magicBtn;
+    private GameObject magicPrefab;
 
     [SerializeField]
     private GameObject faceIcon;

@@ -18,6 +18,8 @@ public class MakeButton : MonoBehaviour
     {
         string temp = gameObject.name;
         gameObject.GetComponent<Button>().onClick.AddListener(() => AttachCallback(temp));
+        gameObject.GetComponent<Button>().onClick.AddListener(() => InventaryCallback(temp));
+
         hero = GameObject.FindGameObjectWithTag("Hero");
     }
 
@@ -36,12 +38,29 @@ public class MakeButton : MonoBehaviour
             hero.GetComponent<FighterAction>().SelectAttack("ability");
         }
         else if(btn.CompareTo("MagicBtn") ==0) 
-
         {
             hero.GetComponent<FighterAction>().SelectAttack("magic");
-
         }
     }
 
+    private void InventaryCallback(string btn)
+    {
+        if (btn.CompareTo("LifePotionBtn") == 0)
+        {
+            hero.GetComponent<InventaryAction>().SelectItem("lifePotion");
+        }
+        else if (btn.CompareTo("ManaPotionBtn") == 0)
+        {
+            hero.GetComponent<InventaryAction>().SelectItem("manaPotion");
+        }
+        else if (btn.CompareTo("ReforcoStrgBtn") == 0)
+        {
+            hero.GetComponent<InventaryAction>().SelectItem("reforcoStrg");
+
+        }else if (btn.CompareTo("BombItemBtn") == 0)
+        {
+            hero.GetComponent<InventaryAction>().SelectItem("bomb");
+        }
+    }
 
 }
