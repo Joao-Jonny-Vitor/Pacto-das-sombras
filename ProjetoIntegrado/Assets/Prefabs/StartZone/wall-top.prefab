@@ -18,15 +18,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 798b11dba8adb41458aed1b86b6868a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -9.536549
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 798b11dba8adb41458aed1b86b6868a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: -0.46902514
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 798b11dba8adb41458aed1b86b6868a4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.08
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 798b11dba8adb41458aed1b86b6868a4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -34,15 +34,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 798b11dba8adb41458aed1b86b6868a4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 798b11dba8adb41458aed1b86b6868a4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 798b11dba8adb41458aed1b86b6868a4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 798b11dba8adb41458aed1b86b6868a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -101,7 +101,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5596986}
+  m_Offset: {x: 0, y: 0.19486606}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: -0.04347826}
@@ -112,5 +112,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 0.8006029}
+  m_Size: {x: 1.28, y: 0.32391858}
   m_EdgeRadius: 0
