@@ -23,9 +23,6 @@ public class FighterAction : MonoBehaviour
     [SerializeField]
     private GameObject faceIcon;
 
-<<<<<<< HEAD
-    public void SelectAttack(string action){
-=======
     private GameObject currentAttack;
     private GameObject meleeAttack;
     private GameObject abilityAttack;
@@ -56,7 +53,6 @@ public class FighterAction : MonoBehaviour
         {
             Debug.Log("Magic Attack!");
         }
->>>>>>> 6f0fb44bfe30157f684a81c6cd9a7c19e608e9d2
 
     }
 }
