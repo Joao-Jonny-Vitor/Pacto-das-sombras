@@ -3,16 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - wall
-  - tombstone
-  - Hero
-<<<<<<< HEAD
-=======
-  - Enemy
-  - Chest
-  - Scenario
->>>>>>> 6f0fb44bfe30157f684a81c6cd9a7c19e608e9d2
+  tags: []
   layers:
   - Default
   - TransparentFX
