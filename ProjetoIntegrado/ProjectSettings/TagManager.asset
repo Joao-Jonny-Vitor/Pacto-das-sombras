@@ -8,6 +8,8 @@ TagManager:
   - tombstone
   - Hero
   - Enemy
+  - Chest
+  - Scenario
   layers:
   - Default
   - TransparentFX
