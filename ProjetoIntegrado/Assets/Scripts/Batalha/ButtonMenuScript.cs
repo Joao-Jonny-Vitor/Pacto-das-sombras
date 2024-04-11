@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ButtonMenuScript : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class ButtonMenuScript : MonoBehaviour
     [SerializeField] private CharacterManagerScript playerManager;
     [SerializeField] private CharacterManagerScript enemyManager;
 
+    private float potion = 10;
+
     public void AttackButton(){
         //Debug.Log("O " + enemy.nome + "Recebeu: " + player.ataque + " de dano");
         enemyManager.SetMinusValue(player.ataque, enemyManager.hpSlider);
@@ -17,12 +20,21 @@ public class ButtonMenuScript : MonoBehaviour
 
     public void DefenseButton()
     {
+        playerManager.SetMinusValue(enemy.ataque, playerManager.hpSlider);
         Debug.Log("Defesa");
     }
 
     public void BagButton()
     {
-        Debug.Log("Mochila Mochila");
+        if (playerManager.hpSlider.maxValue == playerManager.hpSlider.value)
+        {
+            Debug.Log("Vida cheia");
+        }else
+        {
+            playerManager.SetAddValue(potion, playerManager.hpSlider);
+            Debug.Log("Jogador usou uma poção e recuperou " +  potion + " de vida"); 
+        }
+        
     }
 
     public void AbilityButton()

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartZone.unity
     guid: 16c29462f484a6f4790604ceba4a4b20
+  - enabled: 1
+    path: Assets/Scenes/batalha.unity
+    guid: 87e8589da47da044f8f475b76839a1b0
   m_configObjects: {}
