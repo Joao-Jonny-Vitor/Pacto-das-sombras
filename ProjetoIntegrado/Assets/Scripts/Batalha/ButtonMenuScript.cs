@@ -11,17 +11,21 @@ public class ButtonMenuScript : MonoBehaviour
     [SerializeField] private CharacterManagerScript playerManager;
     [SerializeField] private CharacterManagerScript enemyManager;
 
-    private float potion = 10;
+    private float potion = 50;
+
+    public bool hasTurn = true;
 
     public void AttackButton(){
-        //Debug.Log("O " + enemy.nome + "Recebeu: " + player.ataque + " de dano");
+        Debug.Log("O " + enemy.nome + " Recebeu: " + player.ataque + " de dano");
         enemyManager.SetMinusValue(player.ataque, enemyManager.hpSlider);
+        hasTurn = false;
     }
 
     public void DefenseButton()
     {
         playerManager.SetMinusValue(enemy.ataque, playerManager.hpSlider);
         Debug.Log("Defesa");
+        hasTurn = false;
     }
 
     public void BagButton()
@@ -32,9 +36,9 @@ public class ButtonMenuScript : MonoBehaviour
         }else
         {
             playerManager.SetAddValue(potion, playerManager.hpSlider);
-            Debug.Log("Jogador usou uma poção e recuperou " +  potion + " de vida"); 
+            Debug.Log("Jogador usou uma poï¿½ï¿½o e recuperou " +  potion + " de vida"); 
         }
-        
+        hasTurn = false;
     }
 
     public void AbilityButton()
@@ -43,5 +47,6 @@ public class ButtonMenuScript : MonoBehaviour
             (player.ataque * player.skill1.multiplicador) + " de dano");
         enemyManager.SetMinusValue((player.ataque * player.skill1.multiplicador), enemyManager.hpSlider);
         playerManager.SetMinusValue(player.skill1.cost, playerManager.manaSlider);
+        hasTurn = false;
     }
 }

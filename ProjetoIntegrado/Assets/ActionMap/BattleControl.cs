@@ -29,7 +29,7 @@ public partial class @BattleControl: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Move"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""15f9ddd9-9521-409a-aa99-f6ed1da4defa"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -44,6 +44,15 @@ public partial class @BattleControl: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Point"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""7733cc91-f994-46e6-877e-9896e3052f34"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -214,6 +223,17 @@ public partial class @BattleControl: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""aab353f0-d357-42c2-ba0c-2cfa979c0dee"",
+                    ""path"": ""*/{Point}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""bd822659-ce55-4177-abd1-4456b8f41be8"",
                     ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
@@ -236,24 +256,75 @@ public partial class @BattleControl: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c60eaa7c-19fb-4d14-91cb-7a654c673763"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""id"": ""702b0a00-07a0-4b99-8795-c240920d49b4"",
+                    ""path"": ""<Mouse>/{Submit}"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ConfirmAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1071874a-7e05-4988-b129-42ba119ac045"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Point"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ac9ad5c5-c852-49ae-8924-3a4e47d0aebc"",
+                    ""path"": ""<Pen>/{Point}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Point"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a1837cda-8ef3-4774-b597-a33a624bf0e3"",
+                    ""path"": ""<Touchscreen>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Point"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""Keyboard"",
+            ""bindingGroup"": ""Keyboard"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // MoveMenu
         m_MoveMenu = asset.FindActionMap("MoveMenu", throwIfNotFound: true);
         m_MoveMenu_Move = m_MoveMenu.FindAction("Move", throwIfNotFound: true);
         m_MoveMenu_ConfirmAction = m_MoveMenu.FindAction("ConfirmAction", throwIfNotFound: true);
+        m_MoveMenu_Point = m_MoveMenu.FindAction("Point", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -317,12 +388,14 @@ public partial class @BattleControl: IInputActionCollection2, IDisposable
     private List<IMoveMenuActions> m_MoveMenuActionsCallbackInterfaces = new List<IMoveMenuActions>();
     private readonly InputAction m_MoveMenu_Move;
     private readonly InputAction m_MoveMenu_ConfirmAction;
+    private readonly InputAction m_MoveMenu_Point;
     public struct MoveMenuActions
     {
         private @BattleControl m_Wrapper;
         public MoveMenuActions(@BattleControl wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_MoveMenu_Move;
         public InputAction @ConfirmAction => m_Wrapper.m_MoveMenu_ConfirmAction;
+        public InputAction @Point => m_Wrapper.m_MoveMenu_Point;
         public InputActionMap Get() { return m_Wrapper.m_MoveMenu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -338,6 +411,9 @@ public partial class @BattleControl: IInputActionCollection2, IDisposable
             @ConfirmAction.started += instance.OnConfirmAction;
             @ConfirmAction.performed += instance.OnConfirmAction;
             @ConfirmAction.canceled += instance.OnConfirmAction;
+            @Point.started += instance.OnPoint;
+            @Point.performed += instance.OnPoint;
+            @Point.canceled += instance.OnPoint;
         }
 
         private void UnregisterCallbacks(IMoveMenuActions instance)
@@ -348,6 +424,9 @@ public partial class @BattleControl: IInputActionCollection2, IDisposable
             @ConfirmAction.started -= instance.OnConfirmAction;
             @ConfirmAction.performed -= instance.OnConfirmAction;
             @ConfirmAction.canceled -= instance.OnConfirmAction;
+            @Point.started -= instance.OnPoint;
+            @Point.performed -= instance.OnPoint;
+            @Point.canceled -= instance.OnPoint;
         }
 
         public void RemoveCallbacks(IMoveMenuActions instance)
@@ -365,9 +444,19 @@ public partial class @BattleControl: IInputActionCollection2, IDisposable
         }
     }
     public MoveMenuActions @MoveMenu => new MoveMenuActions(this);
+    private int m_KeyboardSchemeIndex = -1;
+    public InputControlScheme KeyboardScheme
+    {
+        get
+        {
+            if (m_KeyboardSchemeIndex == -1) m_KeyboardSchemeIndex = asset.FindControlSchemeIndex("Keyboard");
+            return asset.controlSchemes[m_KeyboardSchemeIndex];
+        }
+    }
     public interface IMoveMenuActions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnConfirmAction(InputAction.CallbackContext context);
+        void OnPoint(InputAction.CallbackContext context);
     }
 }
