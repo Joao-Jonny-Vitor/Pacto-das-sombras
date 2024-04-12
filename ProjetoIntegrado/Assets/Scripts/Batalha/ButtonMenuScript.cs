@@ -15,16 +15,32 @@ public class ButtonMenuScript : MonoBehaviour
 
     public bool hasTurn = true;
 
+    private void Start()
+    {
+        playerManager.SetMaxValue(player.vida, playerManager.hpSlider);
+        playerManager.SetMaxValue(player.mana, playerManager.manaSlider);
+        playerManager.SetValue(player.vida, playerManager.hpSlider);
+        playerManager.SetValue(player.mana, playerManager.manaSlider);
+
+        enemyManager.SetMaxValue(enemy.vida, enemyManager.hpSlider);
+        enemyManager.SetMaxValue(enemy.mana, enemyManager.manaSlider);
+        enemyManager.SetValue(enemy.vida, enemyManager.hpSlider);
+        enemyManager.SetValue(enemy.mana, enemyManager.manaSlider);
+    }
+
     public void AttackButton(){
         Debug.Log("O " + enemy.nome + " Recebeu: " + player.ataque + " de dano");
+
         enemyManager.SetMinusValue(player.ataque, enemyManager.hpSlider);
         hasTurn = false;
     }
 
     public void DefenseButton()
     {
+        /*
         playerManager.SetMinusValue(enemy.ataque, playerManager.hpSlider);
-        Debug.Log("Defesa");
+        Debug.Log("Defesa");*/
+
         hasTurn = false;
     }
 
@@ -36,6 +52,7 @@ public class ButtonMenuScript : MonoBehaviour
         }else
         {
             playerManager.SetAddValue(potion, playerManager.hpSlider);
+            
             Debug.Log("Jogador usou uma po��o e recuperou " +  potion + " de vida"); 
         }
         hasTurn = false;
@@ -45,6 +62,7 @@ public class ButtonMenuScript : MonoBehaviour
     {
         Debug.Log("Player usou " + player.skill1.cost + " de mana para usar " + player.skill1.name + " e dar " + 
             (player.ataque * player.skill1.multiplicador) + " de dano");
+
         enemyManager.SetMinusValue((player.ataque * player.skill1.multiplicador), enemyManager.hpSlider);
         playerManager.SetMinusValue(player.skill1.cost, playerManager.manaSlider);
         hasTurn = false;

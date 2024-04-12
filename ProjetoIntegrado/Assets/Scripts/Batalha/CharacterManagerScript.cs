@@ -28,4 +28,9 @@ public class CharacterManagerScript : MonoBehaviour
     {
         return slider.value;
     }
+
+    public void SetValue(float value, Slider slider)
+    {
+        slider.value = value;
+    }
 }

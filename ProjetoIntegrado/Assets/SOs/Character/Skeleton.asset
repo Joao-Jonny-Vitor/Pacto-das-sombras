@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Esqueleto
   sprite: {fileID: 1704341801197645444, guid: 294acafbc8bd50e45b6a1ede8aa381a8, type: 3}
-  vida: 100
+  vida: 150
   mana: 150
   ataque: 10
   defesa: 20
