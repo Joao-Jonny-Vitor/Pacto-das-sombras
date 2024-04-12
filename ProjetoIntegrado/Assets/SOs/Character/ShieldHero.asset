@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShieldHero
   m_EditorClassIdentifier: 
   nome: Heroi do escudo
-  sprite: {fileID: -6031666877028548940, guid: 74e19c61b6242df4997209617a6ebb77, type: 3}
+  sprite: {fileID: 552445710632973854, guid: 248c812689f34d341a1323252ad012cf, type: 3}
   vida: 75
   mana: 50
   ataque: 15

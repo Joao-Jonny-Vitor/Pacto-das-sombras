@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 74e19c61b6242df4997209617a6ebb77
+guid: bf1c038fb87a6474d9f86a7b69832172
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: heroi_escudo
+  - name: esqueleto_parado64_lado
     originalName: 
-    pivot: {x: 0.5744681, y: -0.05263158}
+    pivot: {x: 0.3478261, y: -0.14}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 47
-      height: 57
-    spriteID: d736a92c6899a4e429abac72f992b0ad
+      width: 23
+      height: 50
+    spriteID: ff0280ac2de65bc41b9339bb010346a2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,20 +144,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1609300355
-    name: heroi_escudo
+    guid: 1665815594
+    name: esqueleto_parado64_lado
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: heroi_escudo
+    - name: esqueleto_parado64_lado
       frameIndex: 0
       cellRect:
-        x: 5
-        y: 3
-        width: 47
-        height: 57
-      spriteId: d736a92c6899a4e429abac72f992b0ad
+        x: 24
+        y: 7
+        width: 23
+        height: 50
+      spriteId: ff0280ac2de65bc41b9339bb010346a2
     linkedCells: []
     parentIndex: -1
   platformSettings: []
