@@ -14,6 +14,8 @@ public class ButtonMenuScript : MonoBehaviour
     private float potion = 50;
 
     public bool hasTurn = true;
+    public bool defenseActive = false;
+    public bool defenseEffect = false;
 
     private void Start()
     {
@@ -36,11 +38,8 @@ public class ButtonMenuScript : MonoBehaviour
     }
 
     public void DefenseButton()
-    {
-        /*
-        playerManager.SetMinusValue(enemy.ataque, playerManager.hpSlider);
-        Debug.Log("Defesa");*/
-
+    { 
+        defenseActive = true;
         hasTurn = false;
     }
 

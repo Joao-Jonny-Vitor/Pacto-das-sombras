@@ -2418,6 +2418,7 @@ MonoBehaviour:
   enemyActions: {fileID: 1461172972}
   playerManager: {fileID: 1821662013}
   enemyManager: {fileID: 2129095763}
+  effectManager: {fileID: 1461172973}
   turn: {fileID: 929446736}
 --- !u!114 &1251646806
 MonoBehaviour:
@@ -2694,6 +2695,8 @@ MonoBehaviour:
   playerManager: {fileID: 1821662013}
   enemyManager: {fileID: 2129095763}
   hasTurn: 1
+  defenseActive: 0
+  defenseEffect: 0
 --- !u!114 &1441420230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2819,6 +2822,7 @@ GameObject:
   - component: {fileID: 1461172971}
   - component: {fileID: 1461172970}
   - component: {fileID: 1461172972}
+  - component: {fileID: 1461172973}
   m_Layer: 5
   m_Name: BattleMenuPanel
   m_TagString: Untagged
@@ -2902,6 +2906,20 @@ MonoBehaviour:
   enemy: {fileID: 11400000, guid: b8e7e7fea40a85f4ca32619e931f3c67, type: 2}
   playerManager: {fileID: 1821662013}
   enemyManager: {fileID: 2129095763}
+--- !u!114 &1461172973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461172968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437a0d9a5a90a4d4b8deb3aba31127c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: 924632fa63a8f5d438da942b67109fda, type: 2}
+  enemy: {fileID: 11400000, guid: b8e7e7fea40a85f4ca32619e931f3c67, type: 2}
 --- !u!1 &1462932345
 GameObject:
   m_ObjectHideFlags: 0
@@ -3791,7 +3809,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2146894256}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1441420229}
+        m_TargetAssemblyTypeName: ButtonMenuScript, Assembly-CSharp
+        m_MethodName: DefenseButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2146894256
 MonoBehaviour:
   m_ObjectHideFlags: 0

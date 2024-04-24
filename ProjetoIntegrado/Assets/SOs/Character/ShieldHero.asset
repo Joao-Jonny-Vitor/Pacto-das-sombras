@@ -16,7 +16,7 @@ MonoBehaviour:
   sprite: {fileID: 552445710632973854, guid: 248c812689f34d341a1323252ad012cf, type: 3}
   vida: 75
   mana: 50
-  ataque: 15
+  ataque: 10
   defesa: 20
   skill1: {fileID: 0}
   skill2: {fileID: 0}

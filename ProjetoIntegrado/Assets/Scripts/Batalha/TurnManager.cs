@@ -14,6 +14,8 @@ public class TurnManager : MonoBehaviour
     [SerializeField] private CharacterManagerScript playerManager;
     [SerializeField] private CharacterManagerScript enemyManager;
 
+    [SerializeField] private EffectManagerScript effectManager;
+
     [SerializeField] private TMP_Text turn;
 
     private void Start()
@@ -46,7 +48,18 @@ public class TurnManager : MonoBehaviour
 
     public void EnemyAction()
     {
-        enemyActions.AttackAction();
+        if (PlayerAction.defenseActive == true)
+        {
+            effectManager.setDefense(true);
+            enemyActions.AttackAction();
+            effectManager.setDefense(false);
+            PlayerAction.defenseActive = false;
+        }
+        else
+        {
+            enemyActions.AttackAction();
+        }
+
         Enable();
         TextTurn("Jogador");
 
