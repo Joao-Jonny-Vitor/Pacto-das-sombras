@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Heroi do escudo
   sprite: {fileID: 552445710632973854, guid: 248c812689f34d341a1323252ad012cf, type: 3}
-  vida: 75
+  vida: 150
   mana: 50
   ataque: 10
   defesa: 20

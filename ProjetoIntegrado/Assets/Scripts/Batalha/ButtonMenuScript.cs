@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class ButtonMenuScript : MonoBehaviour
@@ -10,6 +11,10 @@ public class ButtonMenuScript : MonoBehaviour
 
     [SerializeField] private CharacterManagerScript playerManager;
     [SerializeField] private CharacterManagerScript enemyManager;
+
+    [SerializeField] private GameObject AbilityButton1;
+    [SerializeField] private GameObject itemButton1;
+    [SerializeField] private GameObject mainButtons;
 
     private float potion = 50;
 
@@ -65,5 +70,24 @@ public class ButtonMenuScript : MonoBehaviour
         enemyManager.SetMinusValue((player.ataque * player.skill1.multiplicador), enemyManager.hpSlider);
         playerManager.SetMinusValue(player.skill1.cost, playerManager.manaSlider);
         hasTurn = false;
+    }
+
+    public void ItemButtons()
+    {
+        var eventSystem = EventSystem.current;
+        eventSystem.SetSelectedGameObject(itemButton1, new BaseEventData(eventSystem));
+    }
+
+    public void AbilityButtons()
+    {
+        var eventSystem = EventSystem.current;
+        eventSystem.SetSelectedGameObject(AbilityButton1, new BaseEventData(eventSystem));
+        
+    }
+
+    public void MainButtons()
+    {
+        var eventSystem = EventSystem.current;
+        eventSystem.SetSelectedGameObject(mainButtons, new BaseEventData(eventSystem));
     }
 }
