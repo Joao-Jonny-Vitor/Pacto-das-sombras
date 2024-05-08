@@ -62,13 +62,23 @@ public class ButtonMenuScript : MonoBehaviour
         hasTurn = false;
     }
 
-    public void AbilityButton()
+    public void AbilityButton(int num)
     {
-        Debug.Log("Player usou " + player.skill1.cost + " de mana para usar " + player.skill1.name + " e dar " + 
+        if (num == 1)
+        {
+            Debug.Log("Player usou " + player.skill1.cost + " de mana para usar " + player.skill1.name + " e dar " +
             (player.ataque * player.skill1.multiplicador) + " de dano");
 
-        enemyManager.SetMinusValue((player.ataque * player.skill1.multiplicador), enemyManager.hpSlider);
-        playerManager.SetMinusValue(player.skill1.cost, playerManager.manaSlider);
+            enemyManager.SetMinusValue((player.ataque * player.skill1.multiplicador), enemyManager.hpSlider);
+            playerManager.SetMinusValue(player.skill1.cost, playerManager.manaSlider);
+        }else if (num == 2)
+        {
+            Debug.Log("Player usou " + player.skill2.cost + " de mana para usar " + player.skill2.name + " e dar " +
+            (player.ataque * player.skill2.multiplicador) + " de dano");
+
+            enemyManager.SetMinusValue((player.ataque * player.skill2.multiplicador), enemyManager.hpSlider);
+            playerManager.SetMinusValue(player.skill2.cost, playerManager.manaSlider);
+        }
         hasTurn = false;
     }
 

@@ -17,4 +17,6 @@ public class CharacterSO : ScriptableObject
 
     public SkillsSO skill1;
     public SkillsSO skill2;
+    public SkillsSO skill3;
+    public SkillsSO skill4;
 }
