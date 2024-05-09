@@ -67,7 +67,7 @@ public class Player_movement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject)
         {
             interactingObject = collision.gameObject;
         }
@@ -87,12 +87,30 @@ public class Player_movement : MonoBehaviour
         {
             Debug.Log("Interagiu com o inimigo");
         }
+
+        if(context.started && interactingObject != null && interactingObject.CompareTag("Door"))
+        {
+            Debug.Log("Interagiu com a porta");
+        }
     }
 
     public void OnMovement(InputAction.CallbackContext context)
     {
         direction = context.ReadValue<Vector2>();
     }
+
+    public void OnPress(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            speed = (float)(1.5 * speed);
+        }
+        if (context.canceled)
+        {
+            speed = (float)(speed / 1.5);
+        }
+    }
+    
 }
 
 
