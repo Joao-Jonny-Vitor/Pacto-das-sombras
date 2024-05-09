@@ -10,39 +10,49 @@ using UnityEngine.InputSystem.Interactions;
 
 public class Player_movement : MonoBehaviour
 {
-    
-    public Rigidbody2D rb;
-    
-    private Vector2 Direction;
 
-    [SerializeField] float Speed;
+    public Rigidbody2D rb;
+    private Vector2 direction;
+    private GameObject interactingObject;
+    [SerializeField] private float speed;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    
+
     private void FixedUpdate()
     {
-        rb.velocity = Direction * Speed;
+        rb.velocity = direction * speed;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
-            Debug.Log("Encostou no inimigo");
         {
-           
-            Debug.Log("Interagiu");
+            interactingObject = collision.gameObject;
         }
     }
 
-    private void OnInteraction (InputAction.CallbackContext context){
-
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject == interactingObject)
+        {
+            interactingObject = null;
+        }
     }
-   
-    public void OnMovement(InputAction.CallbackContext context){
-        Direction = context.ReadValue<Vector2>();
 
+    public void OnInteraction(InputAction.CallbackContext context)
+    {
+        if (context.started && interactingObject != null && interactingObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Interagiu com o inimigo");
+        }
+    }
+
+    public void OnMovement(InputAction.CallbackContext context)
+    {
+        direction = context.ReadValue<Vector2>();
     }
 }
 
