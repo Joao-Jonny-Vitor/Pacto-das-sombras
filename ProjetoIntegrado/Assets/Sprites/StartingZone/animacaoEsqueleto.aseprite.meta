@@ -1,0 +1,1059 @@
+fileFormatVersion: 2
+guid: 0c51a080046210e4ab5219a60ed238c1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 14
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638508201175478893
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: animacaoEsqueleto_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 14
+      height: 16
+    spriteID: 18ec165274b950f4cb1ab5074110419e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: animacaoEsqueleto_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 28
+      width: 14
+      height: 16
+    spriteID: b500bda6c41c7c546a867edc2b0f1c27
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 28}
+  - name: animacaoEsqueleto_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 100
+      width: 14
+      height: 15
+    spriteID: fd0517b04317d2b43b356daf78dfe157
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 100}
+  - name: animacaoEsqueleto_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 123
+      width: 14
+      height: 15
+    spriteID: bfe3d9c5004e2ef4285057a55dd5acfa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 123}
+  - name: animacaoEsqueleto_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 192
+      width: 12
+      height: 16
+    spriteID: 2fb1d0d2f278efe418690d3987a3c1df
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 192}
+  - name: animacaoEsqueleto_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 4
+      width: 12
+      height: 15
+    spriteID: 5bee271ffa950664b9e4307cbb36c7ac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 4}
+  - name: animacaoEsqueleto_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 216
+      width: 12
+      height: 16
+    spriteID: dd6dbfc5fb832184b87cbcc8a60a4143
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 216}
+  - name: animacaoEsqueleto_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 27
+      width: 12
+      height: 15
+    spriteID: 3663f543dd9d77b45b047faf5ed5808c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 27}
+  - name: animacaoEsqueleto_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 4
+      width: 12
+      height: 16
+    spriteID: 5d1ce2969bbad6742882455dfb835717
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 4}
+  - name: animacaoEsqueleto_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 28
+      width: 12
+      height: 16
+    spriteID: e752518362896a847bd9320079b4a368
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 28}
+  - name: animacaoEsqueleto_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 50
+      width: 12
+      height: 15
+    spriteID: c422a469b59a15245ad6f96e3c22cc25
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 50}
+  - name: animacaoEsqueleto_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 73
+      width: 12
+      height: 15
+    spriteID: d52c2e8208a3b6147a72a969621a53a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 73}
+  - name: animacaoEsqueleto_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 96
+      width: 12
+      height: 15
+    spriteID: d6a54620a0698d644b3b6fc30ff8dc0b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 96}
+  - name: animacaoEsqueleto_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 52
+      width: 12
+      height: 16
+    spriteID: 220e23cc3ef7eea47b569ad597e590e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 52}
+  - name: animacaoEsqueleto_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 119
+      width: 12
+      height: 15
+    spriteID: 79789af316e59714c8225cf79a51c181
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 119}
+  - name: animacaoEsqueleto_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 76
+      width: 12
+      height: 16
+    spriteID: fae44549872a50046807e12ae40ef1ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 76}
+  - name: animacaoEsqueleto_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 52
+      width: 14
+      height: 16
+    spriteID: 3d9c20a23492f8e4784280cac9ad7c8a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 52}
+  - name: animacaoEsqueleto_Frame_17
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 76
+      width: 14
+      height: 16
+    spriteID: ffc003db583c9764e97fba004840656f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 76}
+  - name: animacaoEsqueleto_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 146
+      width: 14
+      height: 15
+    spriteID: 23608fb1cdbe5f64885ad9b9da5c1606
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 146}
+  - name: animacaoEsqueleto_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 169
+      width: 14
+      height: 15
+    spriteID: 2b6f38a608a6f5e48878672ce647d886
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 169}
+  - name: animacaoEsqueleto_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 100
+      width: 12
+      height: 16
+    spriteID: 26c99caee3368074089f4d978678d98a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 100}
+  - name: animacaoEsqueleto_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 142
+      width: 12
+      height: 15
+    spriteID: ebd1ba514646d8b45977f74c1956a11c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 142}
+  - name: animacaoEsqueleto_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 124
+      width: 12
+      height: 16
+    spriteID: 3ce3e9a1699f88045bbafa0bf32dbe32
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 124}
+  - name: animacaoEsqueleto_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 165
+      width: 12
+      height: 15
+    spriteID: f1d489f24c96c4a4aacb8366d0d64660
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 165}
+  - name: animacaoEsqueleto_Frame_24
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 148
+      width: 12
+      height: 16
+    spriteID: f03c1aedd728e51448def4f822272043
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 148}
+  - name: animacaoEsqueleto_Frame_25
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 172
+      width: 12
+      height: 16
+    spriteID: c2aae9f8bf10c1847961164e3f259e19
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 172}
+  - name: animacaoEsqueleto_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 188
+      width: 12
+      height: 15
+    spriteID: 34b5840d7835d3a448fd64044f086da8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 188}
+  - name: animacaoEsqueleto_Frame_27
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 211
+      width: 12
+      height: 15
+    spriteID: 0538121bf4dc48e439cb14cb2553da15
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 211}
+  - name: animacaoEsqueleto_Frame_28
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 234
+      width: 12
+      height: 15
+    spriteID: 2e2acc03b1afd024aa8d0a6b11fb13d6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 234}
+  - name: animacaoEsqueleto_Frame_29
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 196
+      width: 12
+      height: 16
+    spriteID: be1bf3f3303fea744bc17b874b4c089a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 196}
+  - name: animacaoEsqueleto_Frame_30
+    originalName: 
+    pivot: {x: 0.5, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 4
+      width: 12
+      height: 15
+    spriteID: 69cb70e5c38176e43bdc1a7139d8ef11
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 4}
+  - name: animacaoEsqueleto_Frame_31
+    originalName: 
+    pivot: {x: 0.5, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 220
+      width: 12
+      height: 16
+    spriteID: 70b9d87f77609e145b5d1cfec0f08826
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 220}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -413937134
+    name: animacaoEsqueleto
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: animacaoEsqueleto_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 9
+        y: 7
+        width: 14
+        height: 16
+      spriteId: 18ec165274b950f4cb1ab5074110419e
+    - name: animacaoEsqueleto_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 9
+        y: 7
+        width: 14
+        height: 16
+      spriteId: b500bda6c41c7c546a867edc2b0f1c27
+    - name: animacaoEsqueleto_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 9
+        y: 7
+        width: 14
+        height: 15
+      spriteId: fd0517b04317d2b43b356daf78dfe157
+    - name: animacaoEsqueleto_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 9
+        y: 7
+        width: 14
+        height: 15
+      spriteId: bfe3d9c5004e2ef4285057a55dd5acfa
+    - name: animacaoEsqueleto_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 16
+      spriteId: 2fb1d0d2f278efe418690d3987a3c1df
+    - name: animacaoEsqueleto_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 15
+      spriteId: 5bee271ffa950664b9e4307cbb36c7ac
+    - name: animacaoEsqueleto_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 16
+      spriteId: dd6dbfc5fb832184b87cbcc8a60a4143
+    - name: animacaoEsqueleto_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 15
+      spriteId: 3663f543dd9d77b45b047faf5ed5808c
+    - name: animacaoEsqueleto_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 16
+      spriteId: 5d1ce2969bbad6742882455dfb835717
+    - name: animacaoEsqueleto_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 16
+      spriteId: e752518362896a847bd9320079b4a368
+    - name: animacaoEsqueleto_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 15
+      spriteId: c422a469b59a15245ad6f96e3c22cc25
+    - name: animacaoEsqueleto_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 15
+      spriteId: d52c2e8208a3b6147a72a969621a53a8
+    - name: animacaoEsqueleto_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 15
+      spriteId: d6a54620a0698d644b3b6fc30ff8dc0b
+    - name: animacaoEsqueleto_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 16
+      spriteId: 220e23cc3ef7eea47b569ad597e590e0
+    - name: animacaoEsqueleto_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 15
+      spriteId: 79789af316e59714c8225cf79a51c181
+    - name: animacaoEsqueleto_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 16
+      spriteId: fae44549872a50046807e12ae40ef1ad
+    - name: animacaoEsqueleto_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 9
+        y: 7
+        width: 14
+        height: 16
+      spriteId: 3d9c20a23492f8e4784280cac9ad7c8a
+    - name: animacaoEsqueleto_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 9
+        y: 7
+        width: 14
+        height: 16
+      spriteId: ffc003db583c9764e97fba004840656f
+    - name: animacaoEsqueleto_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 9
+        y: 7
+        width: 14
+        height: 15
+      spriteId: 23608fb1cdbe5f64885ad9b9da5c1606
+    - name: animacaoEsqueleto_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 9
+        y: 7
+        width: 14
+        height: 15
+      spriteId: 2b6f38a608a6f5e48878672ce647d886
+    - name: animacaoEsqueleto_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 16
+      spriteId: 26c99caee3368074089f4d978678d98a
+    - name: animacaoEsqueleto_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 15
+      spriteId: ebd1ba514646d8b45977f74c1956a11c
+    - name: animacaoEsqueleto_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 16
+      spriteId: 3ce3e9a1699f88045bbafa0bf32dbe32
+    - name: animacaoEsqueleto_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 15
+      spriteId: f1d489f24c96c4a4aacb8366d0d64660
+    - name: animacaoEsqueleto_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 16
+      spriteId: f03c1aedd728e51448def4f822272043
+    - name: animacaoEsqueleto_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 16
+      spriteId: c2aae9f8bf10c1847961164e3f259e19
+    - name: animacaoEsqueleto_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 15
+      spriteId: 34b5840d7835d3a448fd64044f086da8
+    - name: animacaoEsqueleto_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 15
+      spriteId: 0538121bf4dc48e439cb14cb2553da15
+    - name: animacaoEsqueleto_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 15
+      spriteId: 2e2acc03b1afd024aa8d0a6b11fb13d6
+    - name: animacaoEsqueleto_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 16
+      spriteId: be1bf3f3303fea744bc17b874b4c089a
+    - name: animacaoEsqueleto_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 15
+      spriteId: 69cb70e5c38176e43bdc1a7139d8ef11
+    - name: animacaoEsqueleto_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 10
+        y: 7
+        width: 12
+        height: 16
+      spriteId: 70b9d87f77609e145b5d1cfec0f08826
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 32, y: 32}

@@ -20,7 +20,16 @@
                     "id": "fc72b618-75df-4450-80c5-fb70644cc1a2",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Run",
+                    "type": "Button",
+                    "id": "6647f79c-872d-4713-8f0f-11d342d2fa48",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
                     "initialStateCheck": false
                 }
             ],
@@ -149,7 +158,7 @@
                 {
                     "name": "up",
                     "id": "b961d73a-6a6f-48c5-a065-699098901782",
-                    "path": "<Gamepad>/dpad/up",
+                    "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -160,7 +169,7 @@
                 {
                     "name": "down",
                     "id": "afcca936-e2dc-49c8-8f94-cc0a5c656a12",
-                    "path": "<Gamepad>/dpad/down",
+                    "path": "<Gamepad>/rightStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -171,7 +180,7 @@
                 {
                     "name": "left",
                     "id": "361a1131-1741-45ab-afcb-d7831b031659",
-                    "path": "<Gamepad>/dpad/left",
+                    "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -182,7 +191,7 @@
                 {
                     "name": "right",
                     "id": "911629ad-4d4d-4dbb-8f24-bd2a3654c7f8",
-                    "path": "<Gamepad>/dpad/right",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -204,11 +213,33 @@
                 {
                     "name": "",
                     "id": "039d3788-33fc-4740-a2e3-4b489bba48a9",
-                    "path": "",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "abef27eb-6030-494a-9894-8d7c7a07d4e2",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "99e46ae0-4c8f-4d9b-a0ae-d05f0a0d7aac",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
