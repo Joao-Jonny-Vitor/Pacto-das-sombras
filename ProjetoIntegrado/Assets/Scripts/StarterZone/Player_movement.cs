@@ -1,12 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Profiling;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Interactions;
+using UnityEngine.UI;
 
 public class Player_movement : MonoBehaviour
 {
@@ -16,6 +10,7 @@ public class Player_movement : MonoBehaviour
     private GameObject interactingObject;
     public Animator animator;
     [SerializeField] private float speed;
+    
 
     private void Awake()
     {
@@ -67,9 +62,14 @@ public class Player_movement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject)
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Door")) 
         {
             interactingObject = collision.gameObject;
+        }
+
+        if (collision.gameObject.CompareTag("movementTutorial"))
+        {
+
         }
     }
 
