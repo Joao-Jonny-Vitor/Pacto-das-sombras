@@ -34,7 +34,7 @@ public class Player_movement : MonoBehaviour
 
         
 
-        // determina a dire��o para ajustar as variaveis
+        // determina a direção para ajustar as variaveis
         if (direction == Vector2.right)
         {
             animator.SetBool("isRight", true);
@@ -64,23 +64,23 @@ public class Player_movement : MonoBehaviour
             animator.SetBool("isUp", false);
         }
     }
-
+    //ativa quando se está em colisão com algo 
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject)
         {
-            interactingObject = collision.gameObject;
+            interactingObject = collision.gameObject; //determina o objeto com que se colidiu
         }
     }
-
+    //ativa apóds terminar a colisão com algo
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject == interactingObject)
+        if (collision.gameObject == interactingObject) 
         {
-            interactingObject = null;
+            interactingObject = null; 
         }
     }
-
+    //responsavel pelo input de interação e com quais objetos o player poderá interagir
     public void OnInteraction(InputAction.CallbackContext context)
     {
         if (context.started && interactingObject != null && interactingObject.CompareTag("Enemy"))
@@ -93,19 +93,19 @@ public class Player_movement : MonoBehaviour
             Debug.Log("Interagiu com a porta");
         }
     }
-
+    //responsavel pelo input de movimento
     public void OnMovement(InputAction.CallbackContext context)
     {
         direction = context.ReadValue<Vector2>();
     }
-
+    //responsavel pelo input de corrida
     public void OnPress(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started) //o 'started' mostra o tipo que o input está, sendo started o ativo no momento 
         {
             speed = (float)(1.5 * speed);
         }
-        if (context.canceled)
+        if (context.canceled)// se refere ao botão sendo parado de ser pressionado 
         {
             speed = (float)(speed / 1.5);
         }
