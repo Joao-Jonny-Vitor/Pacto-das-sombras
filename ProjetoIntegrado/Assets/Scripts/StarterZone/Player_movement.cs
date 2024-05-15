@@ -1,12 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Profiling;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Interactions;
+using UnityEngine.SceneManagement;
 
 public class Player_movement : MonoBehaviour
 {
@@ -15,6 +9,10 @@ public class Player_movement : MonoBehaviour
     private Vector2 direction;
     private GameObject interactingObject;
     public Animator animator;
+
+    private Enemy enemyScript;
+    public CharacterSO enemy;
+
     [SerializeField] private float speed;
 
     private void Awake()
@@ -34,7 +32,7 @@ public class Player_movement : MonoBehaviour
 
         
 
-        // determina a direção para ajustar as variaveis
+        // determina a dire��o para ajustar as variaveis
         if (direction == Vector2.right)
         {
             animator.SetBool("isRight", true);
@@ -64,28 +62,32 @@ public class Player_movement : MonoBehaviour
             animator.SetBool("isUp", false);
         }
     }
-    //ativa quando se está em colisão com algo 
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject)
         {
-            interactingObject = collision.gameObject; //determina o objeto com que se colidiu
+            interactingObject = collision.gameObject;
         }
     }
-    //ativa apóds terminar a colisão com algo
+
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject == interactingObject) 
+        if (collision.gameObject == interactingObject)
         {
-            interactingObject = null; 
+            interactingObject = null;
         }
     }
-    //responsavel pelo input de interação e com quais objetos o player poderá interagir
+
     public void OnInteraction(InputAction.CallbackContext context)
     {
         if (context.started && interactingObject != null && interactingObject.CompareTag("Enemy"))
         {
             Debug.Log("Interagiu com o inimigo");
+            enemyScript = interactingObject.GetComponent<Enemy>();
+            enemy = enemyScript.enemySO;
+            Debug.Log(enemy.name);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         if(context.started && interactingObject != null && interactingObject.CompareTag("Door"))
@@ -93,19 +95,19 @@ public class Player_movement : MonoBehaviour
             Debug.Log("Interagiu com a porta");
         }
     }
-    //responsavel pelo input de movimento
+
     public void OnMovement(InputAction.CallbackContext context)
     {
         direction = context.ReadValue<Vector2>();
     }
-    //responsavel pelo input de corrida
+
     public void OnPress(InputAction.CallbackContext context)
     {
-        if (context.started) //o 'started' mostra o tipo que o input está, sendo started o ativo no momento 
+        if (context.started)
         {
             speed = (float)(1.5 * speed);
         }
-        if (context.canceled)// se refere ao botão sendo parado de ser pressionado 
+        if (context.canceled)
         {
             speed = (float)(speed / 1.5);
         }
