@@ -6,16 +6,23 @@ public class Player_movement : MonoBehaviour
 {
 
     public Rigidbody2D rb;
+    public GameObject UItutorial;
     private Vector2 direction;
     private GameObject interactingObject;
-    public Animator animator;
+    private Animator animator;
     [SerializeField] private float speed;
+
+
+    private float durationC = 6;
     
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        gameObject.SetActive(false);
+        UItutorial.SetActive(false);
+        Invoke(nameof(activePlayer), durationC);
     }
 
     private void FixedUpdate()
@@ -58,6 +65,8 @@ public class Player_movement : MonoBehaviour
             animator.SetBool("isLeft", false);
             animator.SetBool("isUp", false);
         }
+
+        
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -66,11 +75,7 @@ public class Player_movement : MonoBehaviour
         {
             interactingObject = collision.gameObject;
         }
-
-        if (collision.gameObject.CompareTag("movementTutorial"))
-        {
-
-        }
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -78,6 +83,27 @@ public class Player_movement : MonoBehaviour
         if (collision.gameObject == interactingObject)
         {
             interactingObject = null;
+        }
+    }
+
+    //trigger de acesso a colisão das zonas de tutorial
+
+    //trigger ao entrar na area
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("mt"))
+        {
+            UItutorial.SetActive(true);
+            
+        }
+    }
+
+    //trigger ao sair da area
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("mt"))
+        {
+            UItutorial.SetActive(false);
         }
     }
 
@@ -109,6 +135,11 @@ public class Player_movement : MonoBehaviour
         {
             speed = (float)(speed / 1.5);
         }
+    }
+
+    private void activePlayer()
+    {
+        gameObject.SetActive(true);
     }
     
 }
