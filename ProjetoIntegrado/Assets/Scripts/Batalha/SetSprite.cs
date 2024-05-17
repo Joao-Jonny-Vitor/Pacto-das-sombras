@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class SetSprite : MonoBehaviour
 {
-    [SerializeField] private CharacterSO character;
-
     // Start is called before the first frame update
-    void Start()
+    public void SetCharacterSprite(CharacterSO character)
     {
         GetComponent<SpriteRenderer>().sprite = character.sprite;
     }

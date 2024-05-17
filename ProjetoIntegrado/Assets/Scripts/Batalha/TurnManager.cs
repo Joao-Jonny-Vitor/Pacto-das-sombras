@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using Unity.VisualScripting;
 
 public class TurnManager : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
 
-    [SerializeField] private ButtonMenuScript PlayerAction;
-    [SerializeField] private EnemyActions enemyActions;
+    [SerializeField] private ActionsManager Actions;
 
-    [SerializeField] private CharacterManagerScript playerManager;
-    [SerializeField] private CharacterManagerScript enemyManager;
+    [SerializeField] private SliderManager playerManager;
+    [SerializeField] private SliderManager enemyManager;
 
     [SerializeField] private EffectManagerScript effectManager;
 
@@ -32,12 +32,12 @@ public class TurnManager : MonoBehaviour
             Debug.Log("Acabou");
         }
 
-        if (PlayerAction.hasTurn == false)
+        if (Actions.hasTurn == false)
         {
             TextTurn("Inimigo");
             Disable();
             Invoke("EnemyAction", 2.0f);
-            PlayerAction.hasTurn = true;
+            //Actions.hasTurn = true;
         }
     }
 
@@ -48,21 +48,23 @@ public class TurnManager : MonoBehaviour
 
     public void EnemyAction()
     {
-        if (PlayerAction.defenseActive == true)
+        if (Actions.hasTurn == false)
         {
-            effectManager.setDefense(true);
-            enemyActions.AttackAction();
-            effectManager.setDefense(false);
-            PlayerAction.defenseActive = false;
+            if (Actions.defenseActive == true)
+            {
+                effectManager.setDefense(true);
+                Actions.AttackButton(false);
+                effectManager.setDefense(false);
+                Actions.defenseActive = false;
+            }
+            else
+            {
+                Actions.AttackButton(false);
+            }
         }
-        else
-        {
-            enemyActions.AttackAction();
-        }
-
         Enable();
         TextTurn("Jogador");
-
+        Actions.hasTurn = true;
     }
 
     public void Disable()

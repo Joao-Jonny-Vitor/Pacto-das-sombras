@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class CharacterManagerScript : MonoBehaviour
+public class SliderManager : MonoBehaviour
 {
     [SerializeField] public Slider hpSlider;
     [SerializeField] public Slider manaSlider;

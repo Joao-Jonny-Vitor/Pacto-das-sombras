@@ -5,7 +5,7 @@ using TMPro;
 
 public class SetTextValues : MonoBehaviour
 {
-    [SerializeField] private CharacterManagerScript characterManager;
+    [SerializeField] private SliderManager characterManager;
 
     [SerializeField] public TMP_Text hpText;
     [SerializeField] public TMP_Text manaText;

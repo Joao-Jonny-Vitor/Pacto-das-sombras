@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b464b8f507e0b74e9aea1006d07062f, type: 3}
+  m_Name: ShieldHero 1
+  m_EditorClassIdentifier: 
+  nome: Heroi do escudo
+  sprite: {fileID: 21300000, guid: 17570a934dd74114ba9dbe2f15ad0afb, type: 3}
+  vida: 150
+  mana: 50
+  ataque: 10
+  defesa: 20
+  skill1: {fileID: 0}
+  skill2: {fileID: 0}
+  skill3: {fileID: 0}
+  skill4: {fileID: 0}
