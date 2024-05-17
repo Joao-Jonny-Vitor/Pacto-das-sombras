@@ -9,7 +9,8 @@ TagManager:
   - Enemy
   - Door
   - movementTutorial
-  - mt
+  - interactTutorial
+  - runTutorial
   layers:
   - Default
   - TransparentFX

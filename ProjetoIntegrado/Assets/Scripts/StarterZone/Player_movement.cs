@@ -4,24 +4,35 @@ using UnityEngine.UI;
 
 public class Player_movement : MonoBehaviour
 {
-
     public Rigidbody2D rb;
-    public GameObject UItutorial;
+    public GameObject tutorial;
+    public GameObject tutorial_movement;
+    public GameObject tutorial_interact;
+    public GameObject tutorial_run;
     private Vector2 direction;
     private GameObject interactingObject;
     private Animator animator;
     [SerializeField] private float speed;
 
-
     private float durationC = 6;
+
     
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        //deixa o player inativo durante o inicio do jogo
         gameObject.SetActive(false);
-        UItutorial.SetActive(false);
+
+        //define todos os tutoriais como inativos
+        tutorial.SetActive(false);
+        tutorial_movement.SetActive(false); 
+        tutorial_interact.SetActive(false); 
+        tutorial_run.SetActive(false);
+
+        //chama a função activePlayer com um delay de x segundos
         Invoke(nameof(activePlayer), durationC);
     }
 
@@ -33,8 +44,6 @@ public class Player_movement : MonoBehaviour
         // define se ta se movendo
         bool isMoving = direction != Vector2.zero;
         animator.SetBool("isMoving", isMoving);
-
-        
 
         // determina a direção para ajustar as variaveis
         if (direction == Vector2.right)
@@ -66,16 +75,14 @@ public class Player_movement : MonoBehaviour
             animator.SetBool("isUp", false);
         }
 
-        
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Door")) 
+        if (collision.gameObject != null)
         {
             interactingObject = collision.gameObject;
         }
-        
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -91,22 +98,43 @@ public class Player_movement : MonoBehaviour
     //trigger ao entrar na area
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("mt"))
+        if (collision.gameObject.CompareTag("movementTutorial"))
         {
-            UItutorial.SetActive(true);
-            
+            tutorial.SetActive(true);
+            tutorial_movement.SetActive(true);
+        }
+        if (collision.gameObject.CompareTag("interactTutorial"))
+        {
+            tutorial.SetActive(true);
+            tutorial_interact.SetActive(true);
+        }
+        if (collision.gameObject.CompareTag("runTutorial"))
+        {
+            tutorial.SetActive(true);
+            tutorial_run.SetActive(true);
         }
     }
 
     //trigger ao sair da area
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("mt"))
+        if (collision.gameObject.CompareTag("movementTutorial"))
         {
-            UItutorial.SetActive(false);
+            tutorial.SetActive(false);
+            tutorial_movement.SetActive(false);
+            
+        }
+        if (collision.gameObject.CompareTag("interactTutorial"))
+        {
+            tutorial.SetActive(false);
+            tutorial_interact.SetActive(false);
+        }
+        if (collision.gameObject.CompareTag("runTutorial"))
+        {
+            tutorial.SetActive(false);
+            tutorial_run.SetActive(false);
         }
     }
-
     public void OnInteraction(InputAction.CallbackContext context)
     {
         if (context.started && interactingObject != null && interactingObject.CompareTag("Enemy"))
@@ -118,6 +146,11 @@ public class Player_movement : MonoBehaviour
         {
             Debug.Log("Interagiu com a porta");
         }
+
+        if(context.started && interactingObject != null && interactingObject.CompareTag("Chest")){
+
+        }
+            
     }
 
     public void OnMovement(InputAction.CallbackContext context)
