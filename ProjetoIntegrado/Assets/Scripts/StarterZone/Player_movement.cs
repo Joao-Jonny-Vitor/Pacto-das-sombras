@@ -10,7 +10,7 @@ public class Player_movement : MonoBehaviour
     private GameObject interactingObject;
     public Animator animator;
 
-    private Enemy enemyScript;
+    public GetEnemySO enemySO;
     public CharacterSO enemy;
 
     [SerializeField] private float speed;
@@ -84,8 +84,8 @@ public class Player_movement : MonoBehaviour
         if (context.started && interactingObject != null && interactingObject.CompareTag("Enemy"))
         {
             Debug.Log("Interagiu com o inimigo");
-            enemyScript = interactingObject.GetComponent<Enemy>();
-            enemy = enemyScript.enemySO;
+            enemySO = interactingObject.GetComponent<GetEnemySO>();
+            enemy = enemySO.GetCharacterSO();
             Debug.Log(enemy.name);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }

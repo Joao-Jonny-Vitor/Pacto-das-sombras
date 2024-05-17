@@ -597,7 +597,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576446fd1bab1fe41ac18d01e81945df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerMovemntScript: {fileID: 0}
+  enemySO: {fileID: 0}
+  PlayerSO: {fileID: 0}
 --- !u!1 &293379044
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,14 +2235,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ButtonMenuScript, Assembly-CSharp
-        m_MethodName: AttackButton
-        m_Mode: 1
+      - m_Target: {fileID: 1251646807}
+        m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
+        m_MethodName: AbilityOption
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2918,7 +2919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ed320ebf054984e81ac0bca6bda012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: b8e7e7fea40a85f4ca32619e931f3c67, type: 2}
 --- !u!1 &1125235514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2982,14 +2982,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ButtonMenuScript, Assembly-CSharp
-        m_MethodName: BagButton
-        m_Mode: 1
+      - m_Target: {fileID: 1251646807}
+        m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
+        m_MethodName: AbilityOption
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3152,7 +3152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ed320ebf054984e81ac0bca6bda012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: 924632fa63a8f5d438da942b67109fda, type: 2}
 --- !u!1 &1203255793
 GameObject:
   m_ObjectHideFlags: 0
@@ -3235,9 +3234,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441420229}
-        m_TargetAssemblyTypeName: ButtonMenuScript, Assembly-CSharp
-        m_MethodName: AttackButton
+      - m_Target: {fileID: 1251646807}
+        m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
+        m_MethodName: AttackOption
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3550,6 +3549,7 @@ GameObject:
   - component: {fileID: 1251646804}
   - component: {fileID: 1251646805}
   - component: {fileID: 1251646806}
+  - component: {fileID: 1251646807}
   m_Layer: 5
   m_Name: BattleMenu
   m_TagString: Untagged
@@ -3593,10 +3593,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInput: {fileID: 1251646806}
   PlayerAction: {fileID: 1441420229}
-  enemyActions: {fileID: 1461172972}
-  playerManager: {fileID: 1821662013}
+  enemyActions: {fileID: 0}
+  playerManager: {fileID: 0}
   enemyManager: {fileID: 2129095763}
-  effectManager: {fileID: 1461172973}
+  effectManager: {fileID: 0}
   turn: {fileID: 929446736}
 --- !u!114 &1251646806
 MonoBehaviour:
@@ -3628,6 +3628,22 @@ MonoBehaviour:
   m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 1488604979}
+--- !u!114 &1251646807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251646803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a58064e867b6a7b45b333baa6c88e6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInput: {fileID: 1251646806}
+  playerManager: {fileID: 0}
+  enemyManager: {fileID: 0}
+  turn: {fileID: 929446736}
 --- !u!1 &1291644717
 GameObject:
   m_ObjectHideFlags: 0
@@ -3869,11 +3885,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: 924632fa63a8f5d438da942b67109fda, type: 2}
   enemy: {fileID: 11400000, guid: b8e7e7fea40a85f4ca32619e931f3c67, type: 2}
-  playerManager: {fileID: 1821662013}
+  playerManager: {fileID: 0}
   enemyManager: {fileID: 2129095763}
   AbilityButton1: {fileID: 910665133}
   itemButton1: {fileID: 1558302183}
   mainButtons: {fileID: 1203255793}
+  potion: 50
   hasTurn: 1
   defenseActive: 0
   defenseEffect: 0
@@ -4133,8 +4150,6 @@ GameObject:
   - component: {fileID: 1461172969}
   - component: {fileID: 1461172971}
   - component: {fileID: 1461172970}
-  - component: {fileID: 1461172972}
-  - component: {fileID: 1461172973}
   m_Layer: 5
   m_Name: BattleMenuPanel
   m_TagString: Untagged
@@ -4202,36 +4217,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461172968}
   m_CullTransparentMesh: 1
---- !u!114 &1461172972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461172968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef0dada6a7e29d46b5535e8928e04ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 11400000, guid: 924632fa63a8f5d438da942b67109fda, type: 2}
-  enemy: {fileID: 11400000, guid: b8e7e7fea40a85f4ca32619e931f3c67, type: 2}
-  playerManager: {fileID: 1821662013}
-  enemyManager: {fileID: 2129095763}
---- !u!114 &1461172973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461172968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 437a0d9a5a90a4d4b8deb3aba31127c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 11400000, guid: 924632fa63a8f5d438da942b67109fda, type: 2}
-  enemy: {fileID: 11400000, guid: b8e7e7fea40a85f4ca32619e931f3c67, type: 2}
 --- !u!1 &1462932345
 GameObject:
   m_ObjectHideFlags: 0
@@ -4459,14 +4444,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441420229}
-        m_TargetAssemblyTypeName: ButtonMenuScript, Assembly-CSharp
-        m_MethodName: AttackButton
-        m_Mode: 1
+      - m_Target: {fileID: 1251646807}
+        m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
+        m_MethodName: ItemOption
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4779,7 +4764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1821662012}
   - component: {fileID: 1821662014}
-  - component: {fileID: 1821662013}
+  - component: {fileID: 1821662015}
   m_Layer: 5
   m_Name: CharacterStatus
   m_TagString: Untagged
@@ -4810,20 +4795,6 @@ RectTransform:
   m_AnchoredPosition: {x: -312.19, y: 0}
   m_SizeDelta: {x: 380, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1821662013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821662011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c924b6fd53e22d4da28f7335ed08965, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpSlider: {fileID: 961382961}
-  manaSlider: {fileID: 383778777}
 --- !u!114 &1821662014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4836,9 +4807,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef72080f269d9f847a2adcfec23f05bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterManager: {fileID: 1821662013}
-  hpText: {fileID: 1064992528}
-  manaText: {fileID: 894122831}
+--- !u!114 &1821662015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821662011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d52c70b64be2ecb4684f46fe0fe21588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: {fileID: 1064992528}
+  mp: {fileID: 894122831}
+  hpSliderObject: {fileID: 961382961}
+  mpSliderObject: {fileID: 383778777}
+  sprite: {fileID: 1133957428}
+  mpValue: {fileID: 0}
+  hpValue: {fileID: 0}
+  hpSlider: {fileID: 0}
+  mpSlider: {fileID: 0}
+  playerSO: {fileID: 0}
 --- !u!1 &1848935572
 GameObject:
   m_ObjectHideFlags: 0
@@ -5232,6 +5222,7 @@ GameObject:
   - component: {fileID: 2129095762}
   - component: {fileID: 2129095763}
   - component: {fileID: 2129095764}
+  - component: {fileID: 2129095765}
   m_Layer: 5
   m_Name: EnemyStatus
   m_TagString: Untagged
@@ -5288,9 +5279,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef72080f269d9f847a2adcfec23f05bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterManager: {fileID: 2129095763}
-  hpText: {fileID: 1229341061}
-  manaText: {fileID: 686862126}
+--- !u!114 &2129095765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129095761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23bf3cb631955441800986f68e4156b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: {fileID: 1229341061}
+  mp: {fileID: 686862126}
+  hpSliderObject: {fileID: 91170163}
+  mpSliderObject: {fileID: 1820635178}
+  sprite: {fileID: 1112039546}
+  mpValue: {fileID: 0}
+  hpValue: {fileID: 0}
+  hpSlider: {fileID: 0}
+  mpSlider: {fileID: 0}
+  enemySO: {fileID: 0}
 --- !u!1 &2146894253
 GameObject:
   m_ObjectHideFlags: 0
@@ -5373,9 +5383,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441420229}
-        m_TargetAssemblyTypeName: ButtonMenuScript, Assembly-CSharp
-        m_MethodName: DefenseButton
+      - m_Target: {fileID: 1251646807}
+        m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
+        m_MethodName: DefenseOption
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

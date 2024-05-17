@@ -1,70 +1,112 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
 
 public class TurnManager : MonoBehaviour
 {
+
     [SerializeField] private PlayerInput playerInput;
 
-    [SerializeField] private ButtonMenuScript PlayerAction;
-    [SerializeField] private EnemyActions enemyActions;
+    public PlayerManager playerManager;
+    public EnemyManager enemyManager;
 
-    [SerializeField] private CharacterManagerScript playerManager;
-    [SerializeField] private CharacterManagerScript enemyManager;
-
-    [SerializeField] private EffectManagerScript effectManager;
+    //[SerializeField] private EffectManagerScript effectManager;
 
     [SerializeField] private TMP_Text turn;
 
+    private bool HasTurn = true;
+
+    private void Awake()
+    {
+        
+    }
+
     private void Start()
     {
+        playerManager = GetComponent<PlayerManager>();
+        enemyManager = GetComponent<EnemyManager>();
         TextTurn("Jogador");
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        if (playerManager.GetValue(playerManager.hpSlider) == 0 || enemyManager.GetValue(enemyManager.hpSlider) == 0)
+        if (playerManager.hpSlider.GetValue() == 0 || enemyManager.hpSlider.GetValue() == 0)
         {
             Application.Quit();
             Disable();
             Debug.Log("Acabou");
         }
 
-        if (PlayerAction.hasTurn == false)
+        if (HasTurn == false)
         {
             TextTurn("Inimigo");
             Disable();
-            Invoke("EnemyAction", 2.0f);
-            PlayerAction.hasTurn = true;
+            Invoke("AttackOption", 2.0f);
+            HasTurn = true;
         }
+    }
+
+    public void AttackOption()
+    {
+        if (HasTurn == false)
+        {
+            playerManager.hpSlider.SetMinusValue(enemyManager.enemySO.ataque);
+        }
+        else
+        {
+            enemyManager.hpSlider.SetMinusValue(playerManager.playerSO.ataque);
+            HasTurn = false;
+        } 
+    }
+
+    public void DefenseOption()
+    {
+        Debug.Log("Defesa");
+        HasTurn = false;
+    }
+
+    public void AbilityOption(int i)
+    {
+        switch (i)
+        {
+            case 1:
+                enemyManager.hpSlider.SetMinusValue((playerManager.playerSO.ataque * playerManager.playerSO.skill1.multiplicador));
+                playerManager.mpSlider.SetMinusValue(playerManager.playerSO.skill1.cost);
+                break;
+            case 2:
+                enemyManager.hpSlider.SetMinusValue((playerManager.playerSO.ataque * playerManager.playerSO.skill2.multiplicador));
+                playerManager.mpSlider.SetMinusValue(playerManager.playerSO.skill2.cost);
+                break;
+            case 3:
+                enemyManager.hpSlider.SetMinusValue((playerManager.playerSO.ataque * playerManager.playerSO.skill3.multiplicador));
+                playerManager.mpSlider.SetMinusValue(playerManager.playerSO.skill3.cost);
+                break;
+            case 4:
+                enemyManager.hpSlider.SetMinusValue((playerManager.playerSO.ataque * playerManager.playerSO.skill4.multiplicador));
+                playerManager.mpSlider.SetMinusValue(playerManager.playerSO.skill4.cost);
+                break;
+        }
+        HasTurn = false;
+    }
+
+    public void ItemOption(int i)
+    {
+        switch (i)
+        {
+            case 1:
+                playerManager.hpSlider.SetAddValue(50);
+                break;
+        }
+        HasTurn = false;
     }
 
     public void TextTurn(string text)
     {
         turn.SetText("Turno: " + text);
     }
-
-    public void EnemyAction()
-    {
-        if (PlayerAction.defenseActive == true)
-        {
-            effectManager.setDefense(true);
-            enemyActions.AttackAction();
-            effectManager.setDefense(false);
-            PlayerAction.defenseActive = false;
-        }
-        else
-        {
-            enemyActions.AttackAction();
-        }
-
-        Enable();
-        TextTurn("Jogador");
-
-    }
-
     public void Disable()
     {
         playerInput.currentActionMap.Disable();

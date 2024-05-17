@@ -5,15 +5,8 @@ using TMPro;
 
 public class SetTextValues : MonoBehaviour
 {
-    [SerializeField] private CharacterManagerScript characterManager;
-
-    [SerializeField] public TMP_Text hpText;
-    [SerializeField] public TMP_Text manaText;
-
-    // Update is called once per frame
-    void Update()
+    public void SetText(TMP_Text textObject, string text, float value)
     {
-        hpText.SetText("HP: " + characterManager.GetValue(characterManager.hpSlider));
-        manaText.SetText("MP: " + characterManager.GetValue(characterManager.manaSlider));
+        textObject.SetText(text, value);
     }
 }

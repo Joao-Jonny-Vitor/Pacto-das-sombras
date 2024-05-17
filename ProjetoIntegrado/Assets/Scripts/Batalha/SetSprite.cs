@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SetSprite : MonoBehaviour
 {
-    [SerializeField] private CharacterSO character;
-
     // Start is called before the first frame update
-    void Start()
+    public void SetSpriteRenderer(GameObject gameObject,Sprite sprite)
     {
-        GetComponent<SpriteRenderer>().sprite = character.sprite;
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
     }
 
-    
+    public Sprite GetSprite(CharacterSO character)
+    {
+        return character.sprite;
+    }
 }
