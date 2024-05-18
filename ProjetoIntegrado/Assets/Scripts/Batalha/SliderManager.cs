@@ -2,36 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SliderManager : MonoBehaviour
 {
-    public Slider slider;
-    public SliderManager(Slider slider)
-    {
-        this.slider = slider;
-    }
+    [SerializeField] public Slider hpSlider;
+    [SerializeField] public Slider manaSlider;
 
-    public void SetMaxValue(float hp)
+    public void SetMaxValue(float hp, Slider slider)
     {
         slider.maxValue = hp;
     }
 
-    public void SetAddValue(float value)
+    public void SetAddValue(float value, Slider slider)
     {
         slider.value += value;
     }
 
-    public void SetMinusValue(float value)
+    public void SetMinusValue(float value, Slider slider)
     {
         slider.value -= value;
     }
 
-    public float GetValue()
+    public float GetValue(Slider slider)
     {
         return slider.value;
     }
 
-    public void SetValue(float value)
+    public void SetValue(float value, Slider slider)
     {
         slider.value = value;
     }

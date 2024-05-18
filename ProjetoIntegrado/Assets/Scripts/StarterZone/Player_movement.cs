@@ -10,8 +10,7 @@ public class Player_movement : MonoBehaviour
     private GameObject interactingObject;
     public Animator animator;
 
-    public GetEnemySO enemySO;
-    public CharacterSO enemy;
+    [SerializeField] private GameManagerScript gameManagerScript;
 
     [SerializeField] private float speed;
 
@@ -32,7 +31,7 @@ public class Player_movement : MonoBehaviour
 
         
 
-        // determina a direção para ajustar as variaveis
+        // determina a direï¿½ï¿½o para ajustar as variaveis
         if (direction == Vector2.right)
         {
             animator.SetBool("isRight", true);
@@ -84,9 +83,7 @@ public class Player_movement : MonoBehaviour
         if (context.started && interactingObject != null && interactingObject.CompareTag("Enemy"))
         {
             Debug.Log("Interagiu com o inimigo");
-            enemySO = interactingObject.GetComponent<GetEnemySO>();
-            enemy = enemySO.GetCharacterSO();
-            Debug.Log(enemy.name);
+            gameManagerScript.SceneTransition(GetComponent<PlayerSO>().playerSO, interactingObject.GetComponent<EnemySO>().enemySO);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 

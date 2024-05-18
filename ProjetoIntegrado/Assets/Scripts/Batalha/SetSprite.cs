@@ -5,9 +5,9 @@ using UnityEngine;
 public class SetSprite : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void SetSpriteRenderer(GameObject gameObject,Sprite sprite)
+    public void SetCharacterSprite(CharacterSO character)
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
+        gameObject.GetComponent<SpriteRenderer>().sprite = character.sprite;
     }
 
     public Sprite GetSprite(CharacterSO character)
