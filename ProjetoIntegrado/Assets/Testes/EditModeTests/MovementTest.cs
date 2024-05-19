@@ -3,9 +3,20 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
+using PlayerMovementScript;
 
 public class MovementTest
 {
+    private GameObject player;
+    private Player_movement playerMovement;
+
+    [SetUp]
+    public void SetUp()
+    {
+        player = new GameObject("Player");
+        playerMovement = player.GetComponent<Player_movement>();
+    }
+
     // A Test behaves as an ordinary method
     [Test]
     public void MovementTestSimplePasses()

@@ -2,9 +2,18 @@
     "name": "EditModeTests",
     "rootNamespace": "",
     "references": [
-        "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner",
-        "ScriptsStarterZone"
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:a667846c336c1574d9b3ee4be35a6090",
+        "GUID:9649c0a2e113bce4d9858b81e51a41a1",
+        "GUID:0579355f69a5a2a41adb50488f4912c2",
+        "GUID:02a6a18054192a442a67c13eac5ad8c0",
+        "GUID:630c26505cca2c740996734cd1bf8910",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:6546d7765b4165b40850b3667f981c26",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:3ae5734e49d646442ad24f37762ebdd2",
+        "GUID:dc04f38471c3a459fb4d31124ee9127d"
     ],
     "includePlatforms": [
         "Editor"
