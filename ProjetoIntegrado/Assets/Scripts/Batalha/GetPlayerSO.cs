@@ -9,19 +9,20 @@ public class GetPlayerSO : MonoBehaviour
     private GameManagerScript gameManagerScript;
 
     [SerializeField] public CharacterSO battlePlayer;
-
-    private void Awake()
-    {
-        GameObject gameObject = GameObject.Find("GameManager");
-        battlePlayer = gameObject.GetComponent<GameManagerScript>().battlePlayer;
-        Debug.Log(battlePlayer.nome);
-    }
+    [SerializeField] public CharacterSO DefaultPlayer;
 
     private void Start()
     {
         GameObject gameObject = GameObject.Find("GameManager");
-        battlePlayer = gameObject.GetComponent<GameManagerScript>().battlePlayer;
-        Debug.Log(battlePlayer.skill1.name);
+        if (gameObject != null)
+        {
+            battlePlayer = gameObject.GetComponent<GameManagerScript>().battleEnemy;
+            Debug.Log(battlePlayer.nome);
+        }
+        else if (gameObject == null)
+        {
+            battlePlayer = DefaultPlayer;
+        }
     }
 
 }

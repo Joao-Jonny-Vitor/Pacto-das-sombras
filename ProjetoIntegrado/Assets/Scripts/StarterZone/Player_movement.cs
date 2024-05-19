@@ -83,7 +83,8 @@ namespace PlayerMovementScript
             if (context.started && interactingObject != null && interactingObject.CompareTag("Enemy"))
             {
                 Debug.Log("Interagiu com o inimigo");
-                gameManagerScript.SceneTransition(GetComponent<PlayerSO>().playerSO, interactingObject.GetComponent<EnemySO>().enemySO);
+                GameObject gameObject = GameObject.Find("GameManager");
+                gameObject.GetComponent<GameManagerScript>().SceneTransition(GetComponent<PlayerSO>().playerSO, interactingObject.GetComponent<EnemySO>().enemySO);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
 

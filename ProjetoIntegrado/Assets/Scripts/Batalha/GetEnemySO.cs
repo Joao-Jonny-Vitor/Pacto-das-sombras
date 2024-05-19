@@ -6,21 +6,22 @@ using UnityEngine.TextCore.Text;
 
 public class GetEnemySO : MonoBehaviour
 {
-    public GameManagerScript gameManagerScript;
+    private GameManagerScript gameManagerScript;
 
     [SerializeField] public CharacterSO battleEnemy;
-
-    private void Awake()
-    {
-        GameObject gameObject = GameObject.Find("GameManager");
-        battleEnemy = gameObject.GetComponent<GameManagerScript>().battleEnemy;
-        
-    }
+    [SerializeField] public CharacterSO DefaultEnemy;
 
     private void Start()
     {
         GameObject gameObject = GameObject.Find("GameManager");
-        battleEnemy = gameObject.GetComponent<GameManagerScript>().battleEnemy;
-        Debug.Log(battleEnemy.nome);
+        if(gameObject != null)
+        {
+            battleEnemy = gameObject.GetComponent<GameManagerScript>().battleEnemy;
+            Debug.Log(battleEnemy.nome);
+        }else if (gameObject == null)
+        {
+            battleEnemy = DefaultEnemy;
+        }
+
     }
 }

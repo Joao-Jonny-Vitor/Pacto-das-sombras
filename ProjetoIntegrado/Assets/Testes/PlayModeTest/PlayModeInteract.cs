@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Linq;
 using NUnit.Framework;
 using PlayerMovementScript;
 using UnityEngine;
@@ -12,6 +14,11 @@ public class PlayModeInteract : InputTestFixture
     public Keyboard keyboard;
     public GameObject player;
     public Player_movement playerMovement;
+
+    public override void TearDown()
+    {
+        base.TearDown();
+    }
 
     // Teste que simula a movimentação pressionando a tecla W
     [UnityTest]
@@ -38,7 +45,10 @@ public class PlayModeInteract : InputTestFixture
         Release(keyboard.wKey);
         yield return new WaitForSeconds(1f);
 
-        PressAndRelease(keyboard.eKey);
+        Press(keyboard.eKey);
+        yield return new WaitForSeconds(2f);
+        Release(keyboard.eKey);
+
         yield return new WaitForSeconds(2f);
     }
 }
