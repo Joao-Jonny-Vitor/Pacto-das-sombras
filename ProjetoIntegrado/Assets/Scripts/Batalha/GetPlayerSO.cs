@@ -6,7 +6,7 @@ using UnityEngine.TextCore.Text;
 
 public class GetPlayerSO : MonoBehaviour
 {
-    public GameManagerScript gameManagerScript;
+    private GameManagerScript gameManagerScript;
 
     [SerializeField] public CharacterSO battlePlayer;
 

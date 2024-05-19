@@ -9,7 +9,7 @@ namespace PlayerMovementScript
 
         public Rigidbody2D rb;
         private Vector2 direction;
-        private GameObject interactingObject;
+        public GameObject interactingObject;
         public Animator animator;
 
         [SerializeField] private GameManagerScript gameManagerScript;
