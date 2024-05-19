@@ -13,17 +13,13 @@ public class PlayModeMovement : InputTestFixture
     public GameObject player;
     public Player_movement playerMovement;
 
-    // Teste simples para garantir que a cena é carregada
-    [Test]
-    public void PlayModeMovementSimplePasses()
-    {
-        SceneManager.LoadScene("Assets/Scenes/StartZone.unity", LoadSceneMode.Single);
-    }
-
     // Teste que simula a movimentação pressionando a tecla W
     [UnityTest]
-    public IEnumerator PlayModeMovementWithEnumeratorPasses()
+    public IEnumerator PlayModeTestMoveUp()
     {
+        SceneManager.LoadScene("Assets/Scenes/StartZone.unity", LoadSceneMode.Single);
+        yield return new WaitForSeconds(2f);
+
         // Configura o teclado virtual
         keyboard = InputSystem.AddDevice<Keyboard>();
 
@@ -37,14 +33,11 @@ public class PlayModeMovement : InputTestFixture
 
         playerPosition = player.transform.position;
 
-        Debug.Log(keyboard.wKey);
         // Simula o pressionamento da tecla W
         Press(keyboard.wKey);
         yield return new WaitForSeconds(2f); // Espera um segundo para aplicar a movimentação
         Release(keyboard.wKey);
         yield return new WaitForSeconds(2f);
-
-        Debug.Log(player.name);
 
         // Verifica se o jogador se moveu para cima
         Assert.AreNotEqual(playerPosition, player.transform.position, "Player did not move.");
@@ -53,9 +46,11 @@ public class PlayModeMovement : InputTestFixture
 
     // Teste que simula a movimentação pressionando a tecla S
     [UnityTest]
-    public IEnumerator PlayModeMovementWithEnumeratorPasses2()
+    public IEnumerator PlayModeTestMoveDown()
     {
         SceneManager.LoadScene("Assets/Scenes/StartZone.unity", LoadSceneMode.Single);
+        yield return new WaitForSeconds(2f);
+
         // Configura o teclado virtual
         keyboard = InputSystem.AddDevice<Keyboard>();
         Assert.IsNotNull(keyboard, "Keyboard not found in the scene.");
@@ -75,6 +70,70 @@ public class PlayModeMovement : InputTestFixture
         Press(keyboard.sKey);
         yield return new WaitForSeconds(1f); // Espera um segundo para aplicar a movimentação
         Release(keyboard.sKey);
+
+        // Verifica se o jogador se moveu para cima
+        Assert.AreNotEqual(playerPosition, player.transform.position, "Player did not move.");
+        Assert.IsTrue(playerMovement.animator.GetBool("isDown"), "Animator did not update to isDown.");
+    }
+
+    // Teste que simula a movimentação pressionando a tecla S
+    [UnityTest]
+    public IEnumerator PlayModeTestMoveLeft()
+    {
+        SceneManager.LoadScene("Assets/Scenes/StartZone.unity", LoadSceneMode.Single);
+        yield return new WaitForSeconds(2f);
+
+        // Configura o teclado virtual
+        keyboard = InputSystem.AddDevice<Keyboard>();
+        Assert.IsNotNull(keyboard, "Keyboard not found in the scene.");
+
+        // Encontra o jogador na cena
+        player = GameObject.Find("Player");
+        Assert.IsNotNull(player, "Player not found in the scene.");
+
+        // Configura a velocidade do jogador
+        playerMovement = player.GetComponent<Player_movement>();
+        playerMovement.speed = 5f;
+        Debug.Log(playerMovement.speed);
+
+        // Simula o pressionamento da tecla W
+        Press(keyboard.aKey);
+        yield return new WaitForSeconds(1f); // Espera um segundo para aplicar a movimentação
+        Release(keyboard.aKey);
+
+        // Verifica se o jogador se moveu para cima
+        Assert.AreNotEqual(playerPosition, player.transform.position, "Player did not move.");
+        Assert.IsTrue(playerMovement.animator.GetBool("isLeft"), "Animator did not update to isLeft.");
+    }
+
+    // Teste que simula a movimentação pressionando a tecla S
+    [UnityTest]
+    public IEnumerator PlayModeTestMoveRight()
+    {
+        SceneManager.LoadScene("Assets/Scenes/StartZone.unity", LoadSceneMode.Single);
+        yield return new WaitForSeconds(2f);
+
+        // Configura o teclado virtual
+        keyboard = InputSystem.AddDevice<Keyboard>();
+        Assert.IsNotNull(keyboard, "Keyboard not found in the scene.");
+
+        // Encontra o jogador na cena
+        player = GameObject.Find("Player");
+        Assert.IsNotNull(player, "Player not found in the scene.");
+
+        // Configura a velocidade do jogador
+        playerMovement = player.GetComponent<Player_movement>();
+        playerMovement.speed = 5f;
+        Debug.Log(playerMovement.speed);
+
+        // Simula o pressionamento da tecla W
+        Press(keyboard.dKey);
+        yield return new WaitForSeconds(1f); // Espera um segundo para aplicar a movimentação
+        Release(keyboard.dKey);
+
+        // Verifica se o jogador se moveu para cima
+        Assert.AreNotEqual(playerPosition, player.transform.position, "Player did not move.");
+        Assert.IsTrue(playerMovement.animator.GetBool("isRight"), "Animator did not update to isRight.");
     }
 
 }
