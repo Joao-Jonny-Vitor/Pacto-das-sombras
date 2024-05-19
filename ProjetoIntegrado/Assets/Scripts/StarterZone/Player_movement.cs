@@ -14,7 +14,7 @@ namespace PlayerMovementScript
 
         [SerializeField] private GameManagerScript gameManagerScript;
 
-        [SerializeField] private float speed;
+        [SerializeField] public float speed;
 
         private void Awake()
         {
@@ -30,8 +30,6 @@ namespace PlayerMovementScript
             // define se ta se movendo
             bool isMoving = direction != Vector2.zero;
             animator.SetBool("isMoving", isMoving);
-
-
 
             // determina a dire��o para ajustar as variaveis
             if (direction == Vector2.right)
