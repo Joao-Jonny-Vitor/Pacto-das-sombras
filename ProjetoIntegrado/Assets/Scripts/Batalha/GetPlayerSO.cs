@@ -16,7 +16,7 @@ public class GetPlayerSO : MonoBehaviour
         GameObject gameObject = GameObject.Find("GameManager");
         if (gameObject != null)
         {
-            battlePlayer = gameObject.GetComponent<GameManagerScript>().battleEnemy;
+            battlePlayer = gameObject.GetComponent<GameManagerScript>().battlePlayer;
             Debug.Log(battlePlayer.nome);
         }
         else if (gameObject == null)
