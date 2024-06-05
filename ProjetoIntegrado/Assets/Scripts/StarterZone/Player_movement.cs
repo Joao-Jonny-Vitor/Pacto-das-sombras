@@ -16,8 +16,6 @@ public class Player_movement : MonoBehaviour
 
     private float durationC = 6;
 
-    
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,14 +34,14 @@ public class Player_movement : MonoBehaviour
         Invoke(nameof(activePlayer), durationC);
     }
 
-        private void FixedUpdate()
-        {
-            //move o player
-            rb.velocity = direction * speed;
+    private void FixedUpdate()
+    {
+        //move o player
+        rb.velocity = direction * speed;
 
-            // define se ta se movendo
-            bool isMoving = direction != Vector2.zero;
-            animator.SetBool("isMoving", isMoving);
+        // define se ta se movendo
+        bool isMoving = direction != Vector2.zero;
+        animator.SetBool("isMoving", isMoving);
 
         // determina a direção para ajustar as variaveis
         if (direction == Vector2.right)
@@ -74,9 +72,8 @@ public class Player_movement : MonoBehaviour
             animator.SetBool("isLeft", false);
             animator.SetBool("isUp", false);
         }
+    }
 
-    }
-    }
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject != null)
@@ -84,7 +81,7 @@ public class Player_movement : MonoBehaviour
             interactingObject = collision.gameObject;
         }
     }
-    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject == interactingObject)
@@ -103,18 +100,20 @@ public class Player_movement : MonoBehaviour
             tutorial.SetActive(true);
             tutorial_movement.SetActive(true);
         }
+
         if (collision.gameObject.CompareTag("interactTutorial"))
         {
             tutorial.SetActive(true);
             tutorial_interact.SetActive(true);
         }
+
         if (collision.gameObject.CompareTag("runTutorial"))
         {
             tutorial.SetActive(true);
             tutorial_run.SetActive(true);
         }
     }
-    }
+  
     //trigger ao sair da area
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -124,11 +123,13 @@ public class Player_movement : MonoBehaviour
             tutorial_movement.SetActive(false);
             
         }
+
         if (collision.gameObject.CompareTag("interactTutorial"))
         {
             tutorial.SetActive(false);
             tutorial_interact.SetActive(false);
         }
+
         if (collision.gameObject.CompareTag("runTutorial"))
         {
             tutorial.SetActive(false);
@@ -141,7 +142,7 @@ public class Player_movement : MonoBehaviour
         {
             Debug.Log("Interagiu com o inimigo");
         }
-        }
+        
         if(context.started && interactingObject != null && interactingObject.CompareTag("Door"))
         {
             Debug.Log("Interagiu com a porta");
@@ -152,18 +153,19 @@ public class Player_movement : MonoBehaviour
         }
             
     }
+
+    public void OnMovement(InputAction.CallbackContext context)
+    {
+        direction = context.ReadValue<Vector2>();
     }
 
-        public void OnMovement(InputAction.CallbackContext context)
-        {
-            direction = context.ReadValue<Vector2>();
-        }
     public void OnPress(InputAction.CallbackContext context)
     {
         if (context.started)
         {
             speed = (float)(1.5 * speed);
         }
+
         if (context.canceled)
         {
             speed = (float)(speed / 1.5);
@@ -175,7 +177,6 @@ public class Player_movement : MonoBehaviour
         gameObject.SetActive(true);
     }
     
-}
 }
 
 

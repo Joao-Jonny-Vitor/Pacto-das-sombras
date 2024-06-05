@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class TextUpdater : MonoBehaviour
 {
-    
     public TextMeshProUGUI textComponent;
     public string[] textsToDisplay;
     public float updateInterval = 3f; // Intervalo de tempo em segundos entre as trocas de texto
