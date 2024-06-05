@@ -8,7 +8,9 @@ TagManager:
   - Chest
   - Enemy
   - Door
-  - GameManager
+  - movementTutorial
+  - interactTutorial
+  - runTutorial
   layers:
   - Default
   - TransparentFX

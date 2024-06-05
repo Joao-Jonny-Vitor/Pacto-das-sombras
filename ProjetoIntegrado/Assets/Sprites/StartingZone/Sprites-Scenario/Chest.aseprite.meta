@@ -2,7 +2,17 @@ fileFormatVersion: 2
 guid: 8089989b0be52624d9c5e4a694deeeb2
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Closing
+    second: {fileID: 7400000, guid: 0d2dd8653a9714141b1561531ef8846e, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Opening
+    second: {fileID: 7400000, guid: 34590ea44e3ba8049a79ebd2924e4832, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +107,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638469878378607657
+  platformSettingsDirtyTick: 638514944491700629
   textureAssetName: 
   singleSpriteImportData:
   - name: 

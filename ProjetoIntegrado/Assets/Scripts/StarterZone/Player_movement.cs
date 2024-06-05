@@ -1,26 +1,40 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-namespace PlayerMovementScript
+public class Player_movement : MonoBehaviour
 {
-    public class Player_movement : MonoBehaviour
+    public Rigidbody2D rb;
+    public GameObject tutorial;
+    public GameObject tutorial_movement;
+    public GameObject tutorial_interact;
+    public GameObject tutorial_run;
+    private Vector2 direction;
+    private GameObject interactingObject;
+    private Animator animator;
+    [SerializeField] private float speed;
+
+    private float durationC = 6;
+
+    
+
+    private void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
-        public Rigidbody2D rb;
-        private Vector2 direction;
-        public GameObject interactingObject;
-        public Animator animator;
+        //deixa o player inativo durante o inicio do jogo
+        gameObject.SetActive(false);
 
-        [SerializeField] private GameManagerScript gameManagerScript;
+        //define todos os tutoriais como inativos
+        tutorial.SetActive(false);
+        tutorial_movement.SetActive(false); 
+        tutorial_interact.SetActive(false); 
+        tutorial_run.SetActive(false);
 
-        [SerializeField] public float speed;
-
-        private void Awake()
-        {
-            rb = GetComponent<Rigidbody2D>();
-            animator = GetComponent<Animator>();
-        }
+        //chama a função activePlayer com um delay de x segundos
+        Invoke(nameof(activePlayer), durationC);
+    }
 
         private void FixedUpdate()
         {
@@ -31,87 +45,137 @@ namespace PlayerMovementScript
             bool isMoving = direction != Vector2.zero;
             animator.SetBool("isMoving", isMoving);
 
-            // determina a dire��o para ajustar as variaveis
-            if (direction == Vector2.right)
-            {
-                animator.SetBool("isRight", true);
-                animator.SetBool("isLeft", false);
-                animator.SetBool("isUp", false);
-                animator.SetBool("isDown", false);
-            }
-            else if (direction == Vector2.left)
-            {
-                animator.SetBool("isLeft", true);
-                animator.SetBool("isUp", false);
-                animator.SetBool("isDown", false);
-                animator.SetBool("isRight", false);
-            }
-            else if (direction == Vector2.up)
-            {
-                animator.SetBool("isUp", true);
-                animator.SetBool("isRight", false);
-                animator.SetBool("isLeft", false);
-                animator.SetBool("isDown", false);
-            }
-            else if (direction == Vector2.down)
-            {
-                animator.SetBool("isDown", true);
-                animator.SetBool("isRight", false);
-                animator.SetBool("isLeft", false);
-                animator.SetBool("isUp", false);
-            }
-        }
-
-        private void OnCollisionStay2D(Collision2D collision)
+        // determina a direção para ajustar as variaveis
+        if (direction == Vector2.right)
         {
-            if (collision.gameObject)
-            {
-                interactingObject = collision.gameObject;
-            }
+            animator.SetBool("isRight", true);
+            animator.SetBool("isLeft", false);
+            animator.SetBool("isUp", false);
+            animator.SetBool("isDown", false);
         }
-
-        private void OnCollisionExit2D(Collision2D collision)
+        else if (direction == Vector2.left)
         {
-            if (collision.gameObject == interactingObject)
-            {
-                interactingObject = null;
-            }
+            animator.SetBool("isLeft", true);
+            animator.SetBool("isUp", false);
+            animator.SetBool("isDown", false);
+            animator.SetBool("isRight", false);
         }
-
-        public void OnInteraction(InputAction.CallbackContext context)
+        else if (direction == Vector2.up)
         {
-            if (context.started && interactingObject != null && interactingObject.CompareTag("Enemy"))
-            {
-                Debug.Log("Interagiu com o inimigo");
-                GameObject gameObject = GameObject.Find("GameManager");
-                gameObject.GetComponent<GameManagerScript>().SceneTransition(GetComponent<PlayerSO>().playerSO, interactingObject.GetComponent<EnemySO>().enemySO);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
-
-            if (context.started && interactingObject != null && interactingObject.CompareTag("Door"))
-            {
-                Debug.Log("Interagiu com a porta");
-            }
+            animator.SetBool("isUp", true);
+            animator.SetBool("isRight", false);
+            animator.SetBool("isLeft", false);
+            animator.SetBool("isDown", false);
         }
+        else if (direction == Vector2.down)
+        {
+            animator.SetBool("isDown", true);
+            animator.SetBool("isRight", false);
+            animator.SetBool("isLeft", false);
+            animator.SetBool("isUp", false);
+        }
+
+    }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject != null)
+        {
+            interactingObject = collision.gameObject;
+        }
+    }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject == interactingObject)
+        {
+            interactingObject = null;
+        }
+    }
+
+    //trigger de acesso a colisão das zonas de tutorial
+
+    //trigger ao entrar na area
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("movementTutorial"))
+        {
+            tutorial.SetActive(true);
+            tutorial_movement.SetActive(true);
+        }
+        if (collision.gameObject.CompareTag("interactTutorial"))
+        {
+            tutorial.SetActive(true);
+            tutorial_interact.SetActive(true);
+        }
+        if (collision.gameObject.CompareTag("runTutorial"))
+        {
+            tutorial.SetActive(true);
+            tutorial_run.SetActive(true);
+        }
+    }
+    }
+    //trigger ao sair da area
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("movementTutorial"))
+        {
+            tutorial.SetActive(false);
+            tutorial_movement.SetActive(false);
+            
+        }
+        if (collision.gameObject.CompareTag("interactTutorial"))
+        {
+            tutorial.SetActive(false);
+            tutorial_interact.SetActive(false);
+        }
+        if (collision.gameObject.CompareTag("runTutorial"))
+        {
+            tutorial.SetActive(false);
+            tutorial_run.SetActive(false);
+        }
+    }
+    public void OnInteraction(InputAction.CallbackContext context)
+    {
+        if (context.started && interactingObject != null && interactingObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Interagiu com o inimigo");
+        }
+        }
+        if(context.started && interactingObject != null && interactingObject.CompareTag("Door"))
+        {
+            Debug.Log("Interagiu com a porta");
+        }
+
+        if(context.started && interactingObject != null && interactingObject.CompareTag("Chest")){
+
+        }
+            
+    }
+    }
 
         public void OnMovement(InputAction.CallbackContext context)
         {
             direction = context.ReadValue<Vector2>();
         }
-
-        public void OnPress(InputAction.CallbackContext context)
+    public void OnPress(InputAction.CallbackContext context)
+    {
+        if (context.started)
         {
-            if (context.started)
-            {
-                speed = (float)(1.5 * speed);
-            }
-            if (context.canceled)
-            {
-                speed = (float)(speed / 1.5);
-            }
+            speed = (float)(1.5 * speed);
         }
-
+        if (context.canceled)
+        {
+            speed = (float)(speed / 1.5);
+        }
     }
+
+    private void activePlayer()
+    {
+        gameObject.SetActive(true);
+    }
+    
+}
 }
 
 
