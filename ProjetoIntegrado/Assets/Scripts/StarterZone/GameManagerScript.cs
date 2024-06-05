@@ -11,15 +11,15 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] public CharacterSO battlePlayer;
     [SerializeField] public CharacterSO battleEnemy;
 
+    public bool battleOver = false;
+
     private void Awake()
     {
-        // start of new code
         if (Instance != null)
         {
             Destroy(gameObject);
             return;
         }
-        // end of new code
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
@@ -30,5 +30,20 @@ public class GameManagerScript : MonoBehaviour
         battlePlayer = player;
         battleEnemy = enemy;
         Debug.Log(battlePlayer.name);
+    }
+
+    public void BattleOver(float vida, float mana)
+    {
+        battleOver = true;
+        battlePlayer.vida = vida;
+        battlePlayer.mana = mana;
+    }
+
+    public void ExitBattle()
+    {
+        GameObject player = GameObject.Find("Player");
+        PlayerSO playerScript = player.GetComponent<PlayerSO>();
+
+        playerScript.playerSO.vida = battlePlayer.vida;
     }
 }

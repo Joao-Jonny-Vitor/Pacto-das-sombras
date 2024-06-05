@@ -13,7 +13,7 @@ public class SetTextValues : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hpText.SetText("HP: " + characterManager.GetValue(characterManager.hpSlider));
-        manaText.SetText("MP: " + characterManager.GetValue(characterManager.manaSlider));
+        hpText.SetText("HP: " + characterManager.GetMaxValue(characterManager.hpSlider) + "/" + characterManager.GetValue(characterManager.hpSlider));
+        manaText.SetText("MP: " + characterManager.GetMaxValue(characterManager.manaSlider) + "/" + characterManager.GetValue(characterManager.manaSlider));
     }
 }

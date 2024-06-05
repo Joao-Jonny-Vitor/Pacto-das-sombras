@@ -8,8 +8,11 @@ public class CharacterSO : ScriptableObject
 {
     public string nome;
     public Sprite sprite;
+    public Sprite portrait;
 
+    public float maxVida;
     public float vida;
+    public float maxMana;
     public float mana;
 
     public float ataque;

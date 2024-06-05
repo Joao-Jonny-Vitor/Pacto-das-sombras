@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class ActionsManager : MonoBehaviour
 {
-    [SerializeField] private GetPlayerSO player;
+    [SerializeField] public GetPlayerSO player;
     [SerializeField] private GetEnemySO enemy;
 
     [SerializeField] private SliderManager playerManager;
@@ -26,14 +26,14 @@ public class ActionsManager : MonoBehaviour
 
     private void Start()
     {
-        playerManager.SetMaxValue(player.battlePlayer.vida, playerManager.hpSlider);
-        playerManager.SetMaxValue(player.battlePlayer.mana, playerManager.manaSlider);
+        playerManager.SetMaxValue(player.battlePlayer.maxVida, playerManager.hpSlider);
+        playerManager.SetMaxValue(player.battlePlayer.maxMana, playerManager.manaSlider);
         playerManager.SetValue(player.battlePlayer.vida, playerManager.hpSlider);
         playerManager.SetValue(player.battlePlayer.mana, playerManager.manaSlider);
         spritePlayer.SetCharacterSprite(player.battlePlayer);
 
-        enemyManager.SetMaxValue(enemy.battleEnemy.vida, enemyManager.hpSlider);
-        enemyManager.SetMaxValue(enemy.battleEnemy.mana, enemyManager.manaSlider);
+        enemyManager.SetMaxValue(enemy.battleEnemy.maxVida, enemyManager.hpSlider);
+        enemyManager.SetMaxValue(enemy.battleEnemy.maxMana, enemyManager.manaSlider);
         enemyManager.SetValue(enemy.battleEnemy.vida, enemyManager.hpSlider);
         enemyManager.SetValue(enemy.battleEnemy.mana, enemyManager.manaSlider);
         spriteEnemy.SetCharacterSprite(enemy.battleEnemy);

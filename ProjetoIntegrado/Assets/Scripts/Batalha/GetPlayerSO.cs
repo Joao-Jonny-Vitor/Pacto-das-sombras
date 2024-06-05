@@ -13,13 +13,13 @@ public class GetPlayerSO : MonoBehaviour
 
     private void Start()
     {
-        GameObject gameObject = GameObject.Find("GameManager");
-        if (gameObject != null)
+        CharacterSO player = GameObject.Find("GameManager").GetComponent<GameManagerScript>().battlePlayer;
+        if (player != null)
         {
-            battlePlayer = gameObject.GetComponent<GameManagerScript>().battlePlayer;
+            battlePlayer = player;
             Debug.Log(battlePlayer.nome);
         }
-        else if (gameObject == null)
+        else if (player == null)
         {
             battlePlayer = DefaultPlayer;
         }

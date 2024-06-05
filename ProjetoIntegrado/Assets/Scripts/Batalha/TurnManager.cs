@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class TurnManager : MonoBehaviour
 {
@@ -27,9 +28,11 @@ public class TurnManager : MonoBehaviour
     {
         if (playerManager.GetValue(playerManager.hpSlider) == 0 || enemyManager.GetValue(enemyManager.hpSlider) == 0)
         {
-            Application.Quit();
-            Disable();
-            Debug.Log("Acabou");
+            GameManagerScript player = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+
+            Debug.Log("Batalha: " + playerManager.GetValue(playerManager.hpSlider));
+            player.BattleOver(playerManager.GetValue(playerManager.hpSlider), playerManager.GetValue(playerManager.manaSlider));
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
 
         if (Actions.hasTurn == false)

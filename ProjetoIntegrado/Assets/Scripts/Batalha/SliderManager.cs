@@ -29,6 +29,12 @@ public class SliderManager : MonoBehaviour
         return slider.value;
     }
 
+    public float GetMaxValue(Slider slider)
+    {
+        return slider.maxValue;
+    }
+
+
     public void SetValue(float value, Slider slider)
     {
         slider.value = value;
