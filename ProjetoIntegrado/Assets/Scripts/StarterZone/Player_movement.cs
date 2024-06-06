@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class Player_movement : MonoBehaviour
+public class Player_movement : MonoBehaviour, IDataPersistence
 {
     public Rigidbody2D rb;
     public GameObject tutorial;
@@ -175,6 +175,14 @@ public class Player_movement : MonoBehaviour
         gameObject.SetActive(true);
     }
     
+    public void LoadData(GameData data)
+    {
+
+    }
+    public void SaveData(ref GameData data)
+    {
+
+    }
 }
 
 
