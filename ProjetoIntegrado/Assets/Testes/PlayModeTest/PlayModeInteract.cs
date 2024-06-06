@@ -1,8 +1,5 @@
-using System;
 using System.Collections;
-using System.Linq;
 using NUnit.Framework;
-using PlayerMovementScript;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;

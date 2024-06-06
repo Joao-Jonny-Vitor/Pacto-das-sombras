@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player_movement : MonoBehaviour
@@ -10,9 +11,9 @@ public class Player_movement : MonoBehaviour
     public GameObject tutorial_interact;
     public GameObject tutorial_run;
     private Vector2 direction;
-    private GameObject interactingObject;
-    private Animator animator;
-    [SerializeField] private float speed;
+    public GameObject interactingObject;
+    public Animator animator;
+    [SerializeField] public float speed;
 
     private float durationC = 6;
 
@@ -140,7 +141,9 @@ public class Player_movement : MonoBehaviour
     {
         if (context.started && interactingObject != null && interactingObject.CompareTag("Enemy"))
         {
-            Debug.Log("Interagiu com o inimigo");
+            GameObject gameObject = GameObject.Find("GameManager");
+            gameObject.GetComponent<GameManagerScript>().SceneTransition(GetComponent<PlayerSO>().playerSO, interactingObject.GetComponent<EnemySO>().enemySO);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         
         if(context.started && interactingObject != null && interactingObject.CompareTag("Door"))
