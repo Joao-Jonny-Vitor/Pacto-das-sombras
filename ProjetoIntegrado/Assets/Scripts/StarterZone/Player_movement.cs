@@ -12,28 +12,42 @@ public class Player_movement : MonoBehaviour, IDataPersistence
     private Vector2 direction;
     private GameObject interactingObject;
     private Animator animator;
+    private bool firstStart;
     [SerializeField] private float speed;
 
     private float durationC = 6;
 
-    
+
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.PlayerPosition;
+        this.firstStart = data.FirstStart;
+    }
+    public void SaveData(ref GameData data)
+    {
+        data.PlayerPosition = this.transform.position;
+        data.FirstStart = this.firstStart;
+    }
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        //deixa o player inativo durante o inicio do jogo
-        gameObject.SetActive(false);
+        if (firstStart == true)
+        {
+            //deixa o player inativo durante o inicio do jogo
+            gameObject.SetActive(false);
+            //chama a função activePlayer com um delay de x segundos
+            Invoke(nameof(activePlayer), durationC);
+            firstStart = false;
+        }
 
         //define todos os tutoriais como inativos
         tutorial.SetActive(false);
         tutorial_movement.SetActive(false); 
-        tutorial_interact.SetActive(false); 
+        tutorial_interact.SetActive(false);
         tutorial_run.SetActive(false);
-
-        //chama a função activePlayer com um delay de x segundos
-        Invoke(nameof(activePlayer), durationC);
     }
 
     private void FixedUpdate()
@@ -175,14 +189,7 @@ public class Player_movement : MonoBehaviour, IDataPersistence
         gameObject.SetActive(true);
     }
     
-    public void LoadData(GameData data)
-    {
-
-    }
-    public void SaveData(ref GameData data)
-    {
-
-    }
+   
 }
 
 
