@@ -4087,7 +4087,7 @@ Transform:
   m_GameObject: {fileID: 624270619}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.84, y: -1.35, z: -11.2}
+  m_LocalPosition: {x: 0.84, y: -1.5, z: -11.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7225,7 +7225,7 @@ Transform:
   m_GameObject: {fileID: 1094201177}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1891382, y: -1.3499218, z: -11.2}
+  m_LocalPosition: {x: 2.1891477, y: -1.4999189, z: -11.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24086,7 +24086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1436607911}
   m_Layer: 5
-  m_Name: dIaloguePanel_movement
+  m_Name: tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29388,7 +29388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7526707214503334044, guid: 07b7f70b0869dc7409f893723209c04c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.35
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7526707214503334044, guid: 07b7f70b0869dc7409f893723209c04c, type: 3}
       propertyPath: m_LocalPosition.z
