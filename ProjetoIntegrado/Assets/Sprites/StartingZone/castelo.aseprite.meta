@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 76611e790c24b0949a1d382db882dceb
+guid: 4fbba7b0f88a869488cde8595f9092ab
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 128
       height: 124
-    spriteID: 8c4377a5f2b3b6048af3eed2f380cd89
+    spriteID: a6ea1fc5c8b6bbc4693041e26e1b86ed
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 136
       width: 128
       height: 124
-    spriteID: 8ff74a080a801e144a3af25b83927a99
+    spriteID: 5ff875f2f6ec48e4a83ff0a74ef42704
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 268
       width: 128
       height: 124
-    spriteID: 473b9dc6a13804d4cb51591e98703526
+    spriteID: 12e9f3016e5444b45ad7df0a7df2161a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -197,7 +197,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 124
-      spriteId: 8c4377a5f2b3b6048af3eed2f380cd89
+      spriteId: a6ea1fc5c8b6bbc4693041e26e1b86ed
     - name: castelo_Frame_1
       frameIndex: 1
       cellRect:
@@ -205,7 +205,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 124
-      spriteId: 8ff74a080a801e144a3af25b83927a99
+      spriteId: 5ff875f2f6ec48e4a83ff0a74ef42704
     - name: castelo_Frame_2
       frameIndex: 2
       cellRect:
@@ -213,7 +213,7 @@ ScriptedImporter:
         y: 0
         width: 128
         height: 124
-      spriteId: 473b9dc6a13804d4cb51591e98703526
+      spriteId: 12e9f3016e5444b45ad7df0a7df2161a
     linkedCells: []
     parentIndex: -1
   platformSettings: []
