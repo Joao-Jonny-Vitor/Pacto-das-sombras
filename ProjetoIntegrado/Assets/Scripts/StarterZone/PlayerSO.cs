@@ -8,6 +8,7 @@ public class PlayerSO : MonoBehaviour
 
     private void Start()
     {
+
         GameManagerScript gameObject = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
         if (gameObject.battleOver == true)
         {

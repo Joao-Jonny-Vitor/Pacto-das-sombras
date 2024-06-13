@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Player_movement : MonoBehaviour
+public class Player_movement : MonoBehaviour, IDataPersistence
 {
     public Rigidbody2D rb;
     public GameObject tutorial;
@@ -13,9 +13,22 @@ public class Player_movement : MonoBehaviour
     private Vector2 direction;
     public GameObject interactingObject;
     public Animator animator;
+    public bool firstStart = true;
     [SerializeField] public float speed;
 
     private float durationC = 6;
+
+
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.PlayerPosition;
+        this.firstStart = data.FirstStart;
+    }
+    public void SaveData(ref GameData data)
+    {
+        data.PlayerPosition = this.transform.position;
+        data.FirstStart = this.firstStart;
+    }
 
     private void Awake()
     {
@@ -25,14 +38,18 @@ public class Player_movement : MonoBehaviour
         //deixa o player inativo durante o inicio do jogo
         gameObject.SetActive(false);
 
-        //define todos os tutoriais como inativos
-        tutorial.SetActive(false);
-        tutorial_movement.SetActive(false); 
-        tutorial_interact.SetActive(false); 
-        tutorial_run.SetActive(false);
-
         //chama a função activePlayer com um delay de x segundos
         Invoke(nameof(activePlayer), durationC);
+
+        PlayerSO playerSO = gameObject.GetComponent<PlayerSO>();
+        playerSO.playerSO.vida = playerSO.playerSO.maxVida;
+        Debug.Log("HP: " + playerSO.playerSO.vida + "/" + playerSO.playerSO.maxVida);
+
+        //define todos os tutoriais como inativos
+        tutorial.SetActive(false);
+        tutorial_movement.SetActive(false);
+        tutorial_interact.SetActive(false);
+        tutorial_run.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -143,6 +160,9 @@ public class Player_movement : MonoBehaviour
         {
             GameObject gameObject = GameObject.Find("GameManager");
             gameObject.GetComponent<GameManagerScript>().SceneTransition(GetComponent<PlayerSO>().playerSO, interactingObject.GetComponent<EnemySO>().enemySO);
+
+            EnemyDestroyed(interactingObject, interactingObject.GetComponent<HasDefeted>().id);
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         
@@ -155,6 +175,16 @@ public class Player_movement : MonoBehaviour
 
         }
             
+    }
+
+    public void EnemyDestroyed(GameObject enemy, string enemyID)
+    {
+        //PlayerPrefs.SetInt(enemyID, 1);
+        //PlayerPrefs.Save();
+
+        // Destroi o objeto inimigo
+        //enemy.SetActive(false);
+        //Destroy(enemy);
     }
 
     public void OnMovement(InputAction.CallbackContext context)
@@ -179,7 +209,6 @@ public class Player_movement : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
-    
 }
 
 
