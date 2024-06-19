@@ -161,7 +161,7 @@ public class Player_movement : MonoBehaviour, IDataPersistence
             GameObject gameObject = GameObject.Find("GameManager");
             gameObject.GetComponent<GameManagerScript>().SceneTransition(GetComponent<PlayerSO>().playerSO, interactingObject.GetComponent<EnemySO>().enemySO);
 
-            EnemyDestroyed(interactingObject, interactingObject.GetComponent<HasDefeted>().id);
+            EnemyDestroyed(interactingObject.GetComponent<HasDefeted>().id);
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
@@ -177,14 +177,10 @@ public class Player_movement : MonoBehaviour, IDataPersistence
             
     }
 
-    public void EnemyDestroyed(GameObject enemy, string enemyID)
+    public void EnemyDestroyed(string enemyID)
     {
-        //PlayerPrefs.SetInt(enemyID, 1);
-        //PlayerPrefs.Save();
-
-        // Destroi o objeto inimigo
-        //enemy.SetActive(false);
-        //Destroy(enemy);
+        PlayerPrefs.SetInt(enemyID, 1);
+        PlayerPrefs.Save();
     }
 
     public void OnMovement(InputAction.CallbackContext context)

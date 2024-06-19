@@ -17,8 +17,7 @@ public class HasDefeted : MonoBehaviour
         // Checa se o inimigo já foi derrotado
         if (PlayerPrefs.GetInt(id, 0) == 1)
         {
-            //Destroy(gameObject);
-            Debug.Log("oi");
+            Destroy(gameObject);
         }
     }
 }

@@ -10,6 +10,8 @@ public class GameManagerScript : MonoBehaviour
 
     [SerializeField] public CharacterSO battlePlayer;
     [SerializeField] public CharacterSO battleEnemy;
+    private float vida;
+    private float mana;
 
     public bool battleOver = false;
 
@@ -32,18 +34,17 @@ public class GameManagerScript : MonoBehaviour
         Debug.Log(battlePlayer.name);
     }
 
-    public void BattleOver(float vida, float mana)
+    public void BattleOver(float hp, float mp)
     {
         battleOver = true;
-        battlePlayer.vida = vida;
-        battlePlayer.mana = mana;
+        vida = hp;
+        mana = mp;
     }
 
-    public void ExitBattle()
+    public void ExitBattle(CharacterSO player)
     {
-        GameObject player = GameObject.Find("Player");
-        PlayerSO playerScript = player.GetComponent<PlayerSO>();
-
-        playerScript.playerSO.vida = battlePlayer.vida;
+        player.vida = vida;
+        player.mana = mana;
+        battleOver = false;
     }
 }

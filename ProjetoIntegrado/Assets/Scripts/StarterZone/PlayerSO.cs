@@ -9,12 +9,10 @@ public class PlayerSO : MonoBehaviour
     private void Start()
     {
 
-        GameManagerScript gameObject = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
-        if (gameObject.battleOver == true)
+        GameManagerScript gameManager = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        if (gameManager.battleOver == true)
         {
-            gameObject.ExitBattle();
-            Debug.Log(gameObject.battlePlayer.vida);
-            Debug.Log(gameObject.battlePlayer.maxVida);
+            gameManager.ExitBattle(playerSO);
             Debug.Log("HP: " + playerSO.vida + "/" + playerSO.maxVida);
         }
     }
