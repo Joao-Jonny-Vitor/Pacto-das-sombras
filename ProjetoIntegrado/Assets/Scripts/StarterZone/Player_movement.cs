@@ -13,33 +13,39 @@ public class Player_movement : MonoBehaviour, IDataPersistence
     private Vector2 direction;
     public GameObject interactingObject;
     public Animator animator;
-    public bool firstStart = true;
+    private int firstStart;
     [SerializeField] public float speed;
 
     private float durationC = 6;
 
-
+  
     public void LoadData(GameData data)
     {
-        this.transform.position = data.PlayerPosition;
-        this.firstStart = data.FirstStart;
+        
     }
     public void SaveData(ref GameData data)
     {
-        data.PlayerPosition = this.transform.position;
-        data.FirstStart = this.firstStart;
+        
     }
-
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        //deixa o player inativo durante o inicio do jogo
-        gameObject.SetActive(false);
+        int i = PlayerPrefs.GetInt("firstStart");
+        if(i > 0)
+        {
+            LoadPosition();
+        }
+        else
+        {
+            //deixa o player inativo durante o inicio do jogo
+            gameObject.SetActive(false);
 
-        //chama a função activePlayer com um delay de x segundos
-        Invoke(nameof(activePlayer), durationC);
+            //chama a função activePlayer com um delay de x segundos
+            Invoke(nameof(activePlayer), durationC);
+        }
 
         PlayerSO playerSO = gameObject.GetComponent<PlayerSO>();
         playerSO.playerSO.vida = playerSO.playerSO.maxVida;
@@ -158,6 +164,7 @@ public class Player_movement : MonoBehaviour, IDataPersistence
     {
         if (context.started && interactingObject != null && interactingObject.CompareTag("Enemy"))
         {
+            SavePosition();
             GameObject gameObject = GameObject.Find("GameManager");
             gameObject.GetComponent<GameManagerScript>().SceneTransition(GetComponent<PlayerSO>().playerSO, interactingObject.GetComponent<EnemySO>().enemySO);
 
@@ -208,6 +215,27 @@ public class Player_movement : MonoBehaviour, IDataPersistence
     private void activePlayer()
     {
         gameObject.SetActive(true);
+    }
+
+    void LoadPosition()
+    {
+        float x = PlayerPrefs.GetFloat("PlayerPosX", transform.position.x);
+        float y = PlayerPrefs.GetFloat("PlayerPosY", transform.position.y);
+        float z = PlayerPrefs.GetFloat("PlayerPosZ", transform.position.z);
+
+        transform.position = new Vector3(x, y, z);
+        Debug.Log("Posição carregada: " + transform.position);
+    }
+
+    void SavePosition()
+    {
+        Vector3 playerPosition = transform.position;
+        PlayerPrefs.SetFloat("PlayerPosX", playerPosition.x);
+        PlayerPrefs.SetFloat("PlayerPosY", playerPosition.y);
+        PlayerPrefs.SetFloat("PlayerPosZ", playerPosition.z);
+        PlayerPrefs.SetInt("firstStart", 1);
+        PlayerPrefs.Save();
+        Debug.Log("Posição salva: " + transform.position);
     }
 }
 
