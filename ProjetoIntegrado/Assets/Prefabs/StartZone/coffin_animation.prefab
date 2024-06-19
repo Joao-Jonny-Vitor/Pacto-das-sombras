@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: tombstone
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: acf222b8202977c4d8baaaff479c954c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 85cddec9fa9a1fa41b83f199cadbdc8a, type: 2}
     - target: {fileID: 3626916397498700004, guid: acf222b8202977c4d8baaaff479c954c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -26,11 +30,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: acf222b8202977c4d8baaaff479c954c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.0922575
+      value: -5.84
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: acf222b8202977c4d8baaaff479c954c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.39
+      value: -0.59
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: acf222b8202977c4d8baaaff479c954c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -121,10 +125,7 @@ PolygonCollider2D:
       - {x: -1.1566848, y: 4.369929}
       - {x: -1.1811268, y: 3.842009}
       - {x: -0.6095356, y: 3.8400977}
-      - {x: -0.6047189, y: 1.6101222}
-      - {x: -0.6097622, y: 1.2812072}
-      - {x: 0.61250347, y: 1.2824882}
-      - {x: 0.6206884, y: 1.5379306}
+      - {x: -0.098920226, y: 3.8495646}
       - {x: 0.62698823, y: 3.8453012}
       - {x: 1.1657425, y: 3.8574264}
     - - {x: -0.52, y: 3.9599998}
