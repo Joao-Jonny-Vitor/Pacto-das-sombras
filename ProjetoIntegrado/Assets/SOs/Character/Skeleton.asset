@@ -16,9 +16,9 @@ MonoBehaviour:
   sprite: {fileID: -7046244929356131439, guid: bf1c038fb87a6474d9f86a7b69832172, type: 3}
   portrait: {fileID: 0}
   maxVida: 150
-  vida: 150
+  vida: 90
   maxMana: 150
-  mana: 150
+  mana: 130
   ataque: 20
   defesa: 2
   skill1: {fileID: 11400000, guid: e8db7792c33a65146a9162c0b0a91a34, type: 2}

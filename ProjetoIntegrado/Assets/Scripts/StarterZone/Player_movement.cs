@@ -45,11 +45,12 @@ public class Player_movement : MonoBehaviour, IDataPersistence
 
             //chama a função activePlayer com um delay de x segundos
             Invoke(nameof(activePlayer), durationC);
-        }
 
-        PlayerSO playerSO = gameObject.GetComponent<PlayerSO>();
-        playerSO.playerSO.vida = playerSO.playerSO.maxVida;
-        Debug.Log("HP: " + playerSO.playerSO.vida + "/" + playerSO.playerSO.maxVida);
+            PlayerSO playerSO = gameObject.GetComponent<PlayerSO>();
+            playerSO.playerSO.vida = playerSO.playerSO.maxVida;
+            playerSO.playerSO.mana = playerSO.playerSO.maxMana;
+            Debug.Log("HP: " + playerSO.playerSO.vida + "/" + playerSO.playerSO.maxVida);
+        }
 
         //define todos os tutoriais como inativos
         tutorial.SetActive(false);

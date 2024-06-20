@@ -30,7 +30,7 @@ public class TurnManager : MonoBehaviour
         {
             GameManagerScript player = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
 
-            Debug.Log("Batalha: " + playerManager.GetValue(playerManager.hpSlider));
+            Debug.Log("Batalha: " + playerManager.GetValue(playerManager.manaSlider));
             player.BattleOver(playerManager.GetValue(playerManager.hpSlider), playerManager.GetValue(playerManager.manaSlider));
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }

@@ -39,12 +39,14 @@ public class GameManagerScript : MonoBehaviour
         battleOver = true;
         vida = hp;
         mana = mp;
+        Debug.Log(mp);
     }
 
     public void ExitBattle(CharacterSO player)
     {
         player.vida = vida;
         player.mana = mana;
+        Debug.Log(mana);
         battleOver = false;
     }
 }

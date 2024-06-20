@@ -13,6 +13,7 @@ public class PlayerSO : MonoBehaviour
         if (gameManager.battleOver == true)
         {
             gameManager.ExitBattle(playerSO);
+            Debug.Log("MP: " + playerSO.mana + "/" + playerSO.maxMana);
             Debug.Log("HP: " + playerSO.vida + "/" + playerSO.maxVida);
         }
     }
