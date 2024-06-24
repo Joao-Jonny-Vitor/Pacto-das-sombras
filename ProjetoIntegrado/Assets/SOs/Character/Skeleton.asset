@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b464b8f507e0b74e9aea1006d07062f, type: 3}
+  m_Name: Skeleton
+  m_EditorClassIdentifier: 
+  nome: Esqueleto
+  sprite: {fileID: -7046244929356131439, guid: bf1c038fb87a6474d9f86a7b69832172, type: 3}
+  portrait: {fileID: 0}
+  maxVida: 150
+  vida: 90
+  maxMana: 150
+  mana: 130
+  ataque: 20
+  defesa: 2
+  skill1: {fileID: 11400000, guid: e8db7792c33a65146a9162c0b0a91a34, type: 2}
+  skill2: {fileID: 11400000, guid: eab8395d7bd786b4aa3b24110cceac1f, type: 2}
+  skill3: {fileID: 0}
+  skill4: {fileID: 0}

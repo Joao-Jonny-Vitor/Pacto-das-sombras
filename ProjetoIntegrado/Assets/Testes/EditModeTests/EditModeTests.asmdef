@@ -1,0 +1,28 @@
+{
+    "name": "EditModeTests",
+    "rootNamespace": "",
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "ScriptsStarterZone",
+        "ScriptsBattle",
+        "ScriptsCutscene",
+        "ScriptsMenuPrincipal",
+        "Unity.InputSystem",
+        "Unity.InputSystem.IntegrationTests",
+        "Unity.InputSystem.TestFramework"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
