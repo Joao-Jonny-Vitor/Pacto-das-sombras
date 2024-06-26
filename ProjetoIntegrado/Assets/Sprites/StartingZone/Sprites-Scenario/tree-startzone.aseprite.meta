@@ -152,6 +152,7 @@ ScriptedImporter:
     cells:
     - name: tree-startzone
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 0

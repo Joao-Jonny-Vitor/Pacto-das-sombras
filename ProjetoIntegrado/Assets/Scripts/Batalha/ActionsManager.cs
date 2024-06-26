@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 
 public class ActionsManager : MonoBehaviour
 {
+
+    GameManagerScript GameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+
     [SerializeField] public GetPlayerSO player;
     [SerializeField] private GetEnemySO enemy;
 
@@ -43,15 +46,18 @@ public class ActionsManager : MonoBehaviour
         if (i)
         {
             Debug.Log("O " + enemy.battleEnemy.nome + " Recebeu: " + player.battlePlayer.ataque + " de dano");
-
             enemyManager.SetMinusValue(player.battlePlayer.ataque, enemyManager.hpSlider);
             hasTurn = false;
+            GameManagerScript.Instance.AudioManager.PlaySFX(SFX.PlayerAttack);
+
         }
         
         if(!i){
             Debug.Log("O " + player.battlePlayer.nome + " Recebeu: " + enemy.battleEnemy.ataque + " de dano");
 
             playerManager.SetMinusValue(enemy.battleEnemy.ataque, playerManager.hpSlider);
+            GameManagerScript.Instance.AudioManager.PlaySFX(SFX.EnemyAttack);
+
         }
     }
 
@@ -84,13 +90,20 @@ public class ActionsManager : MonoBehaviour
 
             enemyManager.SetMinusValue((player.battlePlayer.ataque * player.battlePlayer.skill1.multiplicador), enemyManager.hpSlider);
             playerManager.SetMinusValue(player.battlePlayer.skill1.cost, playerManager.manaSlider);
-        }else if (num == 2)
+
+            GameManagerScript.Instance.AudioManager.PlaySFX(SFX.PlayerAbility);
+            GameManagerScript.Instance.AudioManager.PlaySFX(SFX.EnemyHurt);
+        }
+        else if (num == 2)
         {
             Debug.Log("Player usou " + player.battlePlayer.skill2.cost + " de mana para usar " + player.battlePlayer.skill2.name + " e dar " +
             (player.battlePlayer.ataque * player.battlePlayer.skill2.multiplicador) + " de dano");
 
             enemyManager.SetMinusValue((player.battlePlayer.ataque * player.battlePlayer.skill2.multiplicador), enemyManager.hpSlider);
             playerManager.SetMinusValue(player.battlePlayer.skill2.cost, playerManager.manaSlider);
+
+            GameManagerScript.Instance.AudioManager.PlaySFX(SFX.PlayerAbility);
+            GameManagerScript.Instance.AudioManager.PlaySFX(SFX.EnemyHurt);
         }
         hasTurn = false;
     }
@@ -105,7 +118,8 @@ public class ActionsManager : MonoBehaviour
     {
         var eventSystem = EventSystem.current;
         eventSystem.SetSelectedGameObject(AbilityButton1, new BaseEventData(eventSystem));
-        
+
+
     }
 
     public void MainButtons()

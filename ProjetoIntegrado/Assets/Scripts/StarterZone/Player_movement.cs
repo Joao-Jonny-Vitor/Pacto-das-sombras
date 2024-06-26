@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Player_movement : MonoBehaviour, IDataPersistence
 {
+ 
     public Rigidbody2D rb;
     public GameObject tutorial;
     public GameObject tutorial_movement;
@@ -17,7 +18,6 @@ public class Player_movement : MonoBehaviour, IDataPersistence
     [SerializeField] public float speed;
 
     private float durationC = 6;
-
   
     public void LoadData(GameData data)
     {
@@ -32,6 +32,7 @@ public class Player_movement : MonoBehaviour, IDataPersistence
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
 
         int i = PlayerPrefs.GetInt("firstStart");
         if(i > 0)
@@ -50,6 +51,7 @@ public class Player_movement : MonoBehaviour, IDataPersistence
             playerSO.playerSO.vida = playerSO.playerSO.maxVida;
             playerSO.playerSO.mana = playerSO.playerSO.maxMana;
             Debug.Log("HP: " + playerSO.playerSO.vida + "/" + playerSO.playerSO.maxVida);
+
         }
 
         //define todos os tutoriais como inativos
@@ -68,6 +70,7 @@ public class Player_movement : MonoBehaviour, IDataPersistence
         bool isMoving = direction != Vector2.zero;
         animator.SetBool("isMoving", isMoving);
 
+
         // determina a direção para ajustar as variaveis
         if (direction == Vector2.right)
         {
@@ -75,6 +78,8 @@ public class Player_movement : MonoBehaviour, IDataPersistence
             animator.SetBool("isLeft", false);
             animator.SetBool("isUp", false);
             animator.SetBool("isDown", false);
+          
+
         }
         else if (direction == Vector2.left)
         {
@@ -82,6 +87,7 @@ public class Player_movement : MonoBehaviour, IDataPersistence
             animator.SetBool("isUp", false);
             animator.SetBool("isDown", false);
             animator.SetBool("isRight", false);
+         
         }
         else if (direction == Vector2.up)
         {
@@ -89,6 +95,7 @@ public class Player_movement : MonoBehaviour, IDataPersistence
             animator.SetBool("isRight", false);
             animator.SetBool("isLeft", false);
             animator.SetBool("isDown", false);
+          
         }
         else if (direction == Vector2.down)
         {
@@ -96,6 +103,7 @@ public class Player_movement : MonoBehaviour, IDataPersistence
             animator.SetBool("isRight", false);
             animator.SetBool("isLeft", false);
             animator.SetBool("isUp", false);
+           
         }
     }
 
@@ -212,6 +220,7 @@ public class Player_movement : MonoBehaviour, IDataPersistence
     private void activePlayer()
     {
         gameObject.SetActive(true);
+        //GameManagerScript.Instance.AudioManager.PlaySFX(SFX.EnvironmentAudioMusic);
     }
 
     void LoadPosition()

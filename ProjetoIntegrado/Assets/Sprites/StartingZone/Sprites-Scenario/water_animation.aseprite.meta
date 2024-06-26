@@ -772,6 +772,7 @@ ScriptedImporter:
     cells:
     - name: water_animation_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -780,6 +781,7 @@ ScriptedImporter:
       spriteId: 70a2532c0585e1b4292d7c7aa0db3907
     - name: water_animation_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -788,6 +790,7 @@ ScriptedImporter:
       spriteId: 8445ee8e0850ab446bdfed8ebf7bfb02
     - name: water_animation_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -796,6 +799,7 @@ ScriptedImporter:
       spriteId: fc0d59b3eba9217488432b5cb3a47b4c
     - name: water_animation_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -804,6 +808,7 @@ ScriptedImporter:
       spriteId: 3cb728bdba8f164459ae001ad9ee605f
     - name: water_animation_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -812,6 +817,7 @@ ScriptedImporter:
       spriteId: ac1cd7dccf85ac649b3ebff32ff956f5
     - name: water_animation_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -820,6 +826,7 @@ ScriptedImporter:
       spriteId: 6ed162ac6b4640b48816d690c85630cc
     - name: water_animation_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -828,6 +835,7 @@ ScriptedImporter:
       spriteId: 32c900d6b89225141856a94f03d08286
     - name: water_animation_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -836,6 +844,7 @@ ScriptedImporter:
       spriteId: e409e3b925eb162488a8b7a81197ad48
     - name: water_animation_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -844,6 +853,7 @@ ScriptedImporter:
       spriteId: 5ef2b5412da866c4d8d0150f7dbe987c
     - name: water_animation_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -852,6 +862,7 @@ ScriptedImporter:
       spriteId: eea2c13581988bf489f0eae92933f6de
     - name: water_animation_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -860,6 +871,7 @@ ScriptedImporter:
       spriteId: cd42e311f86b62b4485aa5625702dff6
     - name: water_animation_Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -868,6 +880,7 @@ ScriptedImporter:
       spriteId: 6f2651178157a4d4d83cd0d6e253f8b7
     - name: water_animation_Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -876,6 +889,7 @@ ScriptedImporter:
       spriteId: 2f0695843cfa082488a9415d3dcd1443
     - name: water_animation_Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -884,6 +898,7 @@ ScriptedImporter:
       spriteId: 7ba9a8f34f5c35148ab6d9cb0b1d3ede
     - name: water_animation_Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -892,6 +907,7 @@ ScriptedImporter:
       spriteId: 783231de68d08b149ad1fb849a95eeb1
     - name: water_animation_Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -900,6 +916,7 @@ ScriptedImporter:
       spriteId: 193c38227df44c04fbae43ae7a36494a
     - name: water_animation_Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -908,6 +925,7 @@ ScriptedImporter:
       spriteId: ee2fac5c1b70c3d4c8bc4814f05e99c9
     - name: water_animation_Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -916,6 +934,7 @@ ScriptedImporter:
       spriteId: f11f526ec48b37b4ca5c597c54bbe0ff
     - name: water_animation_Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -924,6 +943,7 @@ ScriptedImporter:
       spriteId: 8dc9759f2058d5046a648883c42a6bdd
     - name: water_animation_Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -932,6 +952,7 @@ ScriptedImporter:
       spriteId: a7865e60eb575244ab5016a16098f3df
     - name: water_animation_Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -940,6 +961,7 @@ ScriptedImporter:
       spriteId: 2e15f1d037fa2854dbe71c49ba1ab75b
     - name: water_animation_Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -948,6 +970,7 @@ ScriptedImporter:
       spriteId: 87929c7318f1e484592c97b320ed400c
     - name: water_animation_Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -956,6 +979,7 @@ ScriptedImporter:
       spriteId: 934b2e059548a624ab8d3e0201d8002d
     - name: water_animation_Frame_23
       frameIndex: 23
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -964,6 +988,7 @@ ScriptedImporter:
       spriteId: e3bc6ef357548ca44a3844a1e95c8368
     - name: water_animation_Frame_24
       frameIndex: 24
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -972,6 +997,7 @@ ScriptedImporter:
       spriteId: b6bd18483eea90b49b00322aaffcb00a
     - name: water_animation_Frame_25
       frameIndex: 25
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -980,6 +1006,7 @@ ScriptedImporter:
       spriteId: 41190a85fb1428a4f9bbd0610571ad52
     - name: water_animation_Frame_26
       frameIndex: 26
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -988,6 +1015,7 @@ ScriptedImporter:
       spriteId: 6a714ff867ce76f4daea9997141a415c
     - name: water_animation_Frame_27
       frameIndex: 27
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -996,6 +1024,7 @@ ScriptedImporter:
       spriteId: 1e1a39b777c562d499b684bc28d1ab6a
     - name: water_animation_Frame_28
       frameIndex: 28
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -1004,6 +1033,7 @@ ScriptedImporter:
       spriteId: deba32a6abcc8f24491bf80b35649325
     - name: water_animation_Frame_29
       frameIndex: 29
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -1012,6 +1042,7 @@ ScriptedImporter:
       spriteId: 45bae8007cb618941a8e7f57cb84298a
     - name: water_animation_Frame_30
       frameIndex: 30
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -1020,6 +1051,7 @@ ScriptedImporter:
       spriteId: 8ef1d488409228a4abd64f9654a1f3a4
     - name: water_animation_Frame_31
       frameIndex: 31
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0

@@ -402,6 +402,7 @@ ScriptedImporter:
     cells:
     - name: Chest_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 5
@@ -410,6 +411,7 @@ ScriptedImporter:
       spriteId: 573c33548d7a7c44884c4e2b4512520c
     - name: Chest_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 5
@@ -418,6 +420,7 @@ ScriptedImporter:
       spriteId: 7955790bb624aa647b4208d8a3cf94dc
     - name: Chest_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 5
@@ -426,6 +429,7 @@ ScriptedImporter:
       spriteId: d59245f948508834fbc3a56647df7579
     - name: Chest_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 5
@@ -434,6 +438,7 @@ ScriptedImporter:
       spriteId: 984798945193e1843b96ed3abf5b4329
     - name: Chest_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 5
@@ -442,6 +447,7 @@ ScriptedImporter:
       spriteId: 3b709030e3eb2a646b6e5f9c83a3927f
     - name: Chest_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 5
@@ -450,6 +456,7 @@ ScriptedImporter:
       spriteId: 365c7396923a4af48b77983de6f5f1b2
     - name: Chest_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 5
@@ -458,6 +465,7 @@ ScriptedImporter:
       spriteId: fa3f9bbacd1a68d4d9c61780103410eb
     - name: Chest_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 5
@@ -466,6 +474,7 @@ ScriptedImporter:
       spriteId: e332ca43cce6ba7459a310bdbe19985b
     - name: Chest_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 5
@@ -474,6 +483,7 @@ ScriptedImporter:
       spriteId: a76e70ecce10be6448240d3118d572a5
     - name: Chest_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 5
@@ -482,6 +492,7 @@ ScriptedImporter:
       spriteId: c62a6452735967f499444843ad6d0e53
     - name: Chest_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 5
@@ -490,6 +501,7 @@ ScriptedImporter:
       spriteId: 15e420252fee2a74988d0686085d084f
     - name: Chest_Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 5
@@ -498,6 +510,7 @@ ScriptedImporter:
       spriteId: 5d92b9a5dcdd82542bdc4c5fdc64ca1f
     - name: Chest_Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 5

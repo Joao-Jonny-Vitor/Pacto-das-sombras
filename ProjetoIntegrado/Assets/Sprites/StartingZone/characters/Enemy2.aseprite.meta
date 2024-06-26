@@ -212,6 +212,7 @@ ScriptedImporter:
     cells:
     - name: Enemy2_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 7
@@ -220,6 +221,7 @@ ScriptedImporter:
       spriteId: 5be99efd225b5ce4bbc0ac2186c5e75f
     - name: Enemy2_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 7
@@ -228,6 +230,7 @@ ScriptedImporter:
       spriteId: 9c6878a496647cd4dbb365b7560ce554
     - name: Enemy2_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 7
@@ -236,6 +239,7 @@ ScriptedImporter:
       spriteId: 92699aa2174f62749b612dc3aaca9b85
     - name: Enemy2_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 7

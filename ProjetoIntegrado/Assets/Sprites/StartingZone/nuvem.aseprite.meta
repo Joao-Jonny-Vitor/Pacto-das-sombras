@@ -232,6 +232,7 @@ ScriptedImporter:
     cells:
     - name: nuvem_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -240,6 +241,7 @@ ScriptedImporter:
       spriteId: 4b8766684ab87b64a90ca58c5baf38fa
     - name: nuvem_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 84
         y: 2
@@ -248,6 +250,7 @@ ScriptedImporter:
       spriteId: b2a9100155727014c91e081fefab5447
     - name: nuvem_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 48
         y: 2
@@ -256,6 +259,7 @@ ScriptedImporter:
       spriteId: 166a9f64dbafe0f469cdea1856eb28aa
     - name: nuvem_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 2
@@ -264,6 +268,7 @@ ScriptedImporter:
       spriteId: 5baf0c0a62c452c479a5439aefc1379e
     - name: nuvem_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 2

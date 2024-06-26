@@ -597,6 +597,7 @@ ScriptedImporter:
     cells:
     - name: coffin_animation_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 35
         y: 16
@@ -605,6 +606,7 @@ ScriptedImporter:
       spriteId: 0a549cdc7adebaa40808be53202313ce
     - name: coffin_animation_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -613,6 +615,7 @@ ScriptedImporter:
       spriteId: c374f048abea92a41a6e9c887ea8c07f
     - name: coffin_animation_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -621,6 +624,7 @@ ScriptedImporter:
       spriteId: 3afcc033dd1c74b4d9f0914fe1580eea
     - name: coffin_animation_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -629,6 +633,7 @@ ScriptedImporter:
       spriteId: 024930d00a46f7f459bc53347d879962
     - name: coffin_animation_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -637,6 +642,7 @@ ScriptedImporter:
       spriteId: bcbc54be13b76784698d24b1772302ab
     - name: coffin_animation_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -645,6 +651,7 @@ ScriptedImporter:
       spriteId: d087ba19d5802714e81348998328785d
     - name: coffin_animation_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -653,6 +660,7 @@ ScriptedImporter:
       spriteId: e7dad8ed64080924896b9aee037d131d
     - name: coffin_animation_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -661,6 +669,7 @@ ScriptedImporter:
       spriteId: ac9ac56b29baa294c8014539d6ef39fc
     - name: coffin_animation_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -669,6 +678,7 @@ ScriptedImporter:
       spriteId: c8740bf171cdd4f4d9febf1e540986d8
     - name: coffin_animation_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -677,6 +687,7 @@ ScriptedImporter:
       spriteId: c0a322c256ada5640b8b052a0cbd30d0
     - name: coffin_animation_Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -685,6 +696,7 @@ ScriptedImporter:
       spriteId: a24c68f73faa88640b0718da9c8167a6
     - name: coffin_animation_Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -693,6 +705,7 @@ ScriptedImporter:
       spriteId: 84dc9992d90691f4bb03c74bdad35597
     - name: coffin_animation_Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -701,6 +714,7 @@ ScriptedImporter:
       spriteId: 73ebc5defe9c5e745b6c48ec3284089f
     - name: coffin_animation_Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -709,6 +723,7 @@ ScriptedImporter:
       spriteId: 6585dcb64671db34493c2dc5b0e69976
     - name: coffin_animation_Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -717,6 +732,7 @@ ScriptedImporter:
       spriteId: 9e815f2c2f40b6e4da06e670364a227a
     - name: coffin_animation_Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -725,6 +741,7 @@ ScriptedImporter:
       spriteId: bb8e504a11857c647ad1607cda74faa2
     - name: coffin_animation_Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -733,6 +750,7 @@ ScriptedImporter:
       spriteId: 89890004aa0301f42b619d7f287c6f22
     - name: coffin_animation_Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -741,6 +759,7 @@ ScriptedImporter:
       spriteId: dd672e61ad8ded441a54d9e9a77b2e3c
     - name: coffin_animation_Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -749,6 +768,7 @@ ScriptedImporter:
       spriteId: d9d1db1b92362b44d9686138d0bc01d2
     - name: coffin_animation_Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -757,6 +777,7 @@ ScriptedImporter:
       spriteId: 4270711b9fd736042a3d729c6a73a37b
     - name: coffin_animation_Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -765,6 +786,7 @@ ScriptedImporter:
       spriteId: 96d407a57bacd79428cfff0e60ba1c8b
     - name: coffin_animation_Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 16
@@ -773,6 +795,7 @@ ScriptedImporter:
       spriteId: b07773c11c827e1418c529c692c4c858
     - name: coffin_animation_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 35
         y: 32

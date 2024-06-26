@@ -217,6 +217,7 @@ ScriptedImporter:
     cells:
     - name: Skeleton_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -225,6 +226,7 @@ ScriptedImporter:
       spriteId: 74a718eadcba8154b9f8e7a33469bf34
     - name: Skeleton_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -233,6 +235,7 @@ ScriptedImporter:
       spriteId: 70fa126b7fc33e44484ae059b8c09973
     - name: Skeleton_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -241,6 +244,7 @@ ScriptedImporter:
       spriteId: 9cebb0edbf2ed754396a21822d938d6b
     - name: Skeleton_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7

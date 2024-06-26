@@ -772,6 +772,7 @@ ScriptedImporter:
     cells:
     - name: animacaoEsqueleto_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 7
@@ -780,6 +781,7 @@ ScriptedImporter:
       spriteId: 18ec165274b950f4cb1ab5074110419e
     - name: animacaoEsqueleto_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 7
@@ -788,6 +790,7 @@ ScriptedImporter:
       spriteId: b500bda6c41c7c546a867edc2b0f1c27
     - name: animacaoEsqueleto_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 7
@@ -796,6 +799,7 @@ ScriptedImporter:
       spriteId: fd0517b04317d2b43b356daf78dfe157
     - name: animacaoEsqueleto_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 7
@@ -804,6 +808,7 @@ ScriptedImporter:
       spriteId: bfe3d9c5004e2ef4285057a55dd5acfa
     - name: animacaoEsqueleto_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -812,6 +817,7 @@ ScriptedImporter:
       spriteId: 2fb1d0d2f278efe418690d3987a3c1df
     - name: animacaoEsqueleto_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -820,6 +826,7 @@ ScriptedImporter:
       spriteId: 5bee271ffa950664b9e4307cbb36c7ac
     - name: animacaoEsqueleto_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -828,6 +835,7 @@ ScriptedImporter:
       spriteId: dd6dbfc5fb832184b87cbcc8a60a4143
     - name: animacaoEsqueleto_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -836,6 +844,7 @@ ScriptedImporter:
       spriteId: 3663f543dd9d77b45b047faf5ed5808c
     - name: animacaoEsqueleto_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -844,6 +853,7 @@ ScriptedImporter:
       spriteId: 5d1ce2969bbad6742882455dfb835717
     - name: animacaoEsqueleto_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -852,6 +862,7 @@ ScriptedImporter:
       spriteId: e752518362896a847bd9320079b4a368
     - name: animacaoEsqueleto_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -860,6 +871,7 @@ ScriptedImporter:
       spriteId: c422a469b59a15245ad6f96e3c22cc25
     - name: animacaoEsqueleto_Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -868,6 +880,7 @@ ScriptedImporter:
       spriteId: d52c2e8208a3b6147a72a969621a53a8
     - name: animacaoEsqueleto_Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -876,6 +889,7 @@ ScriptedImporter:
       spriteId: d6a54620a0698d644b3b6fc30ff8dc0b
     - name: animacaoEsqueleto_Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -884,6 +898,7 @@ ScriptedImporter:
       spriteId: 220e23cc3ef7eea47b569ad597e590e0
     - name: animacaoEsqueleto_Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -892,6 +907,7 @@ ScriptedImporter:
       spriteId: 79789af316e59714c8225cf79a51c181
     - name: animacaoEsqueleto_Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -900,6 +916,7 @@ ScriptedImporter:
       spriteId: fae44549872a50046807e12ae40ef1ad
     - name: animacaoEsqueleto_Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 7
@@ -908,6 +925,7 @@ ScriptedImporter:
       spriteId: 3d9c20a23492f8e4784280cac9ad7c8a
     - name: animacaoEsqueleto_Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 7
@@ -916,6 +934,7 @@ ScriptedImporter:
       spriteId: ffc003db583c9764e97fba004840656f
     - name: animacaoEsqueleto_Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 7
@@ -924,6 +943,7 @@ ScriptedImporter:
       spriteId: 23608fb1cdbe5f64885ad9b9da5c1606
     - name: animacaoEsqueleto_Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 7
@@ -932,6 +952,7 @@ ScriptedImporter:
       spriteId: 2b6f38a608a6f5e48878672ce647d886
     - name: animacaoEsqueleto_Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -940,6 +961,7 @@ ScriptedImporter:
       spriteId: 26c99caee3368074089f4d978678d98a
     - name: animacaoEsqueleto_Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -948,6 +970,7 @@ ScriptedImporter:
       spriteId: ebd1ba514646d8b45977f74c1956a11c
     - name: animacaoEsqueleto_Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -956,6 +979,7 @@ ScriptedImporter:
       spriteId: 3ce3e9a1699f88045bbafa0bf32dbe32
     - name: animacaoEsqueleto_Frame_23
       frameIndex: 23
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -964,6 +988,7 @@ ScriptedImporter:
       spriteId: f1d489f24c96c4a4aacb8366d0d64660
     - name: animacaoEsqueleto_Frame_24
       frameIndex: 24
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -972,6 +997,7 @@ ScriptedImporter:
       spriteId: f03c1aedd728e51448def4f822272043
     - name: animacaoEsqueleto_Frame_25
       frameIndex: 25
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -980,6 +1006,7 @@ ScriptedImporter:
       spriteId: c2aae9f8bf10c1847961164e3f259e19
     - name: animacaoEsqueleto_Frame_26
       frameIndex: 26
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -988,6 +1015,7 @@ ScriptedImporter:
       spriteId: 34b5840d7835d3a448fd64044f086da8
     - name: animacaoEsqueleto_Frame_27
       frameIndex: 27
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -996,6 +1024,7 @@ ScriptedImporter:
       spriteId: 0538121bf4dc48e439cb14cb2553da15
     - name: animacaoEsqueleto_Frame_28
       frameIndex: 28
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -1004,6 +1033,7 @@ ScriptedImporter:
       spriteId: 2e2acc03b1afd024aa8d0a6b11fb13d6
     - name: animacaoEsqueleto_Frame_29
       frameIndex: 29
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -1012,6 +1042,7 @@ ScriptedImporter:
       spriteId: be1bf3f3303fea744bc17b874b4c089a
     - name: animacaoEsqueleto_Frame_30
       frameIndex: 30
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7
@@ -1020,6 +1051,7 @@ ScriptedImporter:
       spriteId: 69cb70e5c38176e43bdc1a7139d8ef11
     - name: animacaoEsqueleto_Frame_31
       frameIndex: 31
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 7

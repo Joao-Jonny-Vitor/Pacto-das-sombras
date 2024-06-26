@@ -192,6 +192,7 @@ ScriptedImporter:
     cells:
     - name: castelo_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -200,6 +201,7 @@ ScriptedImporter:
       spriteId: a6ea1fc5c8b6bbc4693041e26e1b86ed
     - name: castelo_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -208,6 +210,7 @@ ScriptedImporter:
       spriteId: 5ff875f2f6ec48e4a83ff0a74ef42704
     - name: castelo_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0

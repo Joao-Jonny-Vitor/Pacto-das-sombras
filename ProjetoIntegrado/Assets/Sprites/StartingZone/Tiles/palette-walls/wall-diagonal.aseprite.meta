@@ -152,6 +152,7 @@ ScriptedImporter:
     cells:
     - name: wall-diagonal
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 8
         y: 0

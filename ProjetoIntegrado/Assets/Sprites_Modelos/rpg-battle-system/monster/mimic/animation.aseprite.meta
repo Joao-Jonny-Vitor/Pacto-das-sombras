@@ -712,6 +712,7 @@ ScriptedImporter:
     cells:
     - name: animation_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -720,6 +721,7 @@ ScriptedImporter:
       spriteId: d454aaf432af6db46928a4adf1632342
     - name: animation_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -728,6 +730,7 @@ ScriptedImporter:
       spriteId: 69485504bc72bfa40ac384b33d5f31aa
     - name: animation_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -736,6 +739,7 @@ ScriptedImporter:
       spriteId: f9c94ebd3998ce64499a875b0afb8c5b
     - name: animation_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -744,6 +748,7 @@ ScriptedImporter:
       spriteId: c3aef7577d9760144a020e1d5788af08
     - name: animation_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -752,6 +757,7 @@ ScriptedImporter:
       spriteId: 5c9a56bea06d79244b8f0589388c9acb
     - name: animation_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -760,6 +766,7 @@ ScriptedImporter:
       spriteId: dc983a88a88353f4bba6f59fc22d8ec0
     - name: animation_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -768,6 +775,7 @@ ScriptedImporter:
       spriteId: 8ae5b3f4f5f761f43a0959477e477ab8
     - name: animation_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -776,6 +784,7 @@ ScriptedImporter:
       spriteId: 3b6a52b7266614d44a252d25f3ade047
     - name: animation_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -784,6 +793,7 @@ ScriptedImporter:
       spriteId: 3d841dabd6827aa4b9ced245a78815f1
     - name: animation_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -792,6 +802,7 @@ ScriptedImporter:
       spriteId: 3f42a31e1550a3a4d9b5ff9820efb498
     - name: animation_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -800,6 +811,7 @@ ScriptedImporter:
       spriteId: 58f9ef9d2f98f584eb6c975b4662b6b8
     - name: animation_Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -808,6 +820,7 @@ ScriptedImporter:
       spriteId: dd2e8b1ac79bcbf43b00f8cd57d9730a
     - name: animation_Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -816,6 +829,7 @@ ScriptedImporter:
       spriteId: 6ede60f26e97eec43922538061cae03f
     - name: animation_Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -824,6 +838,7 @@ ScriptedImporter:
       spriteId: 87550f7db50575f419214b2650f88d2c
     - name: animation_Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -832,6 +847,7 @@ ScriptedImporter:
       spriteId: 1b3262bdf8e4eeb4cb60bc4fdce7b414
     - name: animation_Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -840,6 +856,7 @@ ScriptedImporter:
       spriteId: 1a49d16843d6601418535d247325f9a9
     - name: animation_Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -848,6 +865,7 @@ ScriptedImporter:
       spriteId: c79745c784ad6054b838ecd8cc207fe2
     - name: animation_Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -856,6 +874,7 @@ ScriptedImporter:
       spriteId: 4f331499d2860114085f6fa0feb30559
     - name: animation_Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -864,6 +883,7 @@ ScriptedImporter:
       spriteId: 90c8157098d8eff47b218063c5c83f94
     - name: animation_Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -872,6 +892,7 @@ ScriptedImporter:
       spriteId: 4295246eb1028e74aa2daca3fe2d0034
     - name: animation_Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -880,6 +901,7 @@ ScriptedImporter:
       spriteId: f64169947fa1a31449a0a640f782b5c4
     - name: animation_Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -888,6 +910,7 @@ ScriptedImporter:
       spriteId: c29974767ec750540a56c1aeceeebf7a
     - name: animation_Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -896,6 +919,7 @@ ScriptedImporter:
       spriteId: dd074f4300c017c419ba72ad1d4018ae
     - name: animation_Frame_23
       frameIndex: 23
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -904,6 +928,7 @@ ScriptedImporter:
       spriteId: fceee9119dd19f84fa6e0bacd30b9ecd
     - name: animation_Frame_24
       frameIndex: 24
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -912,6 +937,7 @@ ScriptedImporter:
       spriteId: 95a4bf47b49f59b4099e9ffbecd14a35
     - name: animation_Frame_25
       frameIndex: 25
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -920,6 +946,7 @@ ScriptedImporter:
       spriteId: 9326cebff54eb6246a58ed6ec43c7dc6
     - name: animation_Frame_26
       frameIndex: 26
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -928,6 +955,7 @@ ScriptedImporter:
       spriteId: 5da756350dcc68a439f22329c4313aaf
     - name: animation_Frame_27
       frameIndex: 27
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -936,6 +964,7 @@ ScriptedImporter:
       spriteId: b4063a24d8deca1428b2938a73f9720f
     - name: animation_Frame_28
       frameIndex: 28
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0

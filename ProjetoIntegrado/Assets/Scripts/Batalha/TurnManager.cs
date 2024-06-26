@@ -33,6 +33,8 @@ public class TurnManager : MonoBehaviour
             Debug.Log("Batalha: " + playerManager.GetValue(playerManager.manaSlider));
             player.BattleOver(playerManager.GetValue(playerManager.hpSlider), playerManager.GetValue(playerManager.manaSlider));
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
+
         }
 
         if (Actions.hasTurn == false)
@@ -59,11 +61,14 @@ public class TurnManager : MonoBehaviour
                 Actions.AttackButton(false);
                 effectManager.setDefense(false);
                 Actions.defenseActive = false;
+                
             }
             else
             {
                 Actions.AttackButton(false);
             }
+
+            
         }
         Enable();
         TextTurn("Jogador");
