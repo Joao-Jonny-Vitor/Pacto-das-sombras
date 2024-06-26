@@ -184,7 +184,8 @@ public class Player_movement : MonoBehaviour, IDataPersistence
         
         if(context.started && interactingObject != null && interactingObject.CompareTag("Door"))
         {
-            Debug.Log("Interagiu com a porta");
+            PlayerPrefs.DeleteAll();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
         }
 
         if(context.started && interactingObject != null && interactingObject.CompareTag("Chest")){

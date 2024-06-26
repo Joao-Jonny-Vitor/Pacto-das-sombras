@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShieldHero 1
   m_EditorClassIdentifier: 
   nome: Heroi do escudo
-  sprite: {fileID: 21300000, guid: 17570a934dd74114ba9dbe2f15ad0afb, type: 3}
+  sprite: {fileID: 21300000, guid: fe49c396f84a20b44a0ea9b4747323a3, type: 3}
   portrait: {fileID: 0}
   maxVida: 150
   vida: 150

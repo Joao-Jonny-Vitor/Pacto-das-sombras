@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
-public class PlayModeMovement : InputTestFixture
+public class PlayMode1Movement : InputTestFixture
 {
     public Vector2 playerPosition;
     public Keyboard keyboard;

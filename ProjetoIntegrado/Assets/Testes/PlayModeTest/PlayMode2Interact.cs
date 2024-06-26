@@ -5,15 +5,18 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
-public class PlayModeinteract : InputTestFixture
+public class PlayModeInteract : InputTestFixture
 {
     public Vector2 playerPosition;
     public Keyboard keyboard;
     public GameObject player;
     public Player_movement playerMovement;
 
+    [TearDown]
     public override void TearDown()
     {
+        PlayerInput.Destroy(player);
+        InputSystem.RemoveDevice(keyboard);
         base.TearDown();
     }
 
